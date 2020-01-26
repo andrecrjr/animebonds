@@ -31,6 +31,8 @@ const FindChar = props => {
     }
   }, [imgBg]);
 
+
+
   return (
     <>
       <section
@@ -49,8 +51,38 @@ const FindChar = props => {
           >
             Anime List Search
           </h1>
+          <AnimeForm findAnime={findAnime} anime={anime} setAnime={setAnime} backToIndex={backToIndex} his={his}/>
+        </div>
+        {anime === "" ? (
+          <h2 className="char__waiting">Waiting for the anime, senpai!</h2>
+        ) : (
+          ``
+        )}
+        <NameAnime data={data} anime={anime} color={colors}/>
+        {loading ? (
+          <h2>Loading</h2>
+        ) : (
+          <>
+            <MainRoutes data={data} setImg={setImg} />;
+          </>
+        )}
 
-          <form onSubmit={findAnime}>
+        {error ? <h2>Error 404</h2> : ``}
+      </section>
+    </>
+  );
+};
+
+const NameAnime = ({ data, anime, color }) =>
+  data !== undefined && anime !== "" ? (
+    <h1 className="container--chars__title" style={{color:`${color ? color[0] : `#000`}`}}>{`${data.Media.title.english}`}</h1>
+  ) : (
+    ``
+  );
+
+const AnimeForm = ({findAnime,  setAnime, backToIndex, anime, his}) =>{
+  return (
+    <form onSubmit={findAnime}>
             <input
               type="text"
               value={anime}
@@ -59,39 +91,13 @@ const FindChar = props => {
               }}
               onClick={e => {
                 if (e.target.value.length > 0) {
-                  console.log("bateu aqui");
                   setAnime("");
                 }
                 backToIndex(his);
               }}
             />
           </form>
-        </div>
-        {anime === "" ? (
-          <p className="char__waiting">Esperando nome do anime...</p>
-        ) : (
-          ``
-        )}
-        <NameAnime data={data} anime={anime} />
-        {loading ? (
-          <>Carregando</>
-        ) : (
-          <>
-            <MainRoutes data={data} setImg={setImg} />;
-          </>
-        )}
-
-        {error ? <p>Quebrou</p> : ``}
-      </section>
-    </>
-  );
-};
-
-const NameAnime = ({ data, anime }) =>
-  data !== undefined && anime !== "" ? (
-    <h1 className="container--chars__title">{`${data.Media.title.english}`}</h1>
-  ) : (
-    ``
-  );
+  )
+}
 
 export default FindChar;

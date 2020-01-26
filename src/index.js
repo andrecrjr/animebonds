@@ -5,9 +5,6 @@ import Main from "./components/App";
 import { ApolloProvider } from "@apollo/react-hooks";
 import "./style/index.scss";
 import { BrowserRouter as Router } from "react-router-dom";
-import createBrowserHistory from "history/createBrowserHistory";
-
-export const history = createBrowserHistory();
 
 const client = new ApolloClient({
   uri: "https://graphql.anilist.co"
@@ -16,7 +13,7 @@ const client = new ApolloClient({
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Router history={history}>
+    <Router>
       <Main />
     </Router>
   </ApolloProvider>,

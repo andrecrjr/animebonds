@@ -12,7 +12,7 @@ export const MainRoutes = ({ data, setImg }) => {
       <CSSTransition
         key={loc.key}
         classNames="char"
-        timeout={{ enter: 3000, exit: 300 }}
+        timeout={{ enter: 2000, exit: 300 }}
         unmountOnExit
       >
         <Switch location={loc}>

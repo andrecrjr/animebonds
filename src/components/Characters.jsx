@@ -22,6 +22,6 @@ export const EachCharacter = props => {
       </div>
     );
   } else {
-    return <p>Nothing to show</p>;
+    return <p>Nothing to show</p>
   }
-};
+}
