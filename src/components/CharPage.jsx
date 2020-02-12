@@ -6,7 +6,7 @@ export const CharPage = props => {
   const { error, data, loading } = useQuery(CHAR_ANIME, {
     variables: { char: props.match.params.id }
   });
-  console.log(data);
+
   return (
     <section className="char__container animate-container">
       {data !== undefined ? (

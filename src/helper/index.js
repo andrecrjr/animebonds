@@ -15,6 +15,6 @@ export const getColorImage = async (imgBg, dispatchColor) =>{
     const color = await getPalette(imgBg)
     dispatchColor({type:"ADD_COLOR",payload:color.vibrant})
   }catch(e){
-    console.err(e)
+    console.log(e)
   }
 }

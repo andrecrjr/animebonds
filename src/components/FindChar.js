@@ -4,6 +4,7 @@ import { MainRoutes } from "./AppRoutes";
 import { useHistory } from "react-router-dom";
 import { SEARCH_ANIME_QUERY } from "../helper/gqlqueries";
 import { getColorImage, colorReduce } from "../helper/";
+import wallpaper_anime from '../img/anime-wall.jpg';
 
 const FindChar = props => {
   const [anime, setAnime] = useState("naruto");
@@ -31,14 +32,12 @@ const FindChar = props => {
     }
   }, [imgBg]);
 
-
-
   return (
     <>
       <section
         className="container--general"
         style={{
-          backgroundImage: `url(${imgBg})`,
+          backgroundImage: `url(${imgBg ? imgBg : wallpaper_anime})`,
           minHeight: "100vh"
         }}
       >
@@ -54,16 +53,16 @@ const FindChar = props => {
           <AnimeForm findAnime={findAnime} anime={anime} setAnime={setAnime} backToIndex={backToIndex} his={his}/>
         </div>
         {anime === "" ? (
-          <h2 className="char__waiting">Waiting for the anime, senpai!</h2>
+          <h2 className="char__waiting">Waiting for your anime, senpai!</h2>
         ) : (
           ``
         )}
         <NameAnime data={data} anime={anime} color={colors}/>
         {loading ? (
-          <h2>Loading</h2>
+          <h2 className="container--loading">Loading</h2>
         ) : (
           <>
-            <MainRoutes data={data} setImg={setImg} />;
+            <MainRoutes data={data} setImg={setImg} />
           </>
         )}
 

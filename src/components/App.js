@@ -2,7 +2,7 @@ import React from "react";
 import FindChar from "./FindChar";
 
 const Main = () => {
-  return <FindChar />;
+  return <FindChar />
 };
 
 export default Main;
