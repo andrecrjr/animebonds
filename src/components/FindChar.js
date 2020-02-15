@@ -28,7 +28,9 @@ const FindChar = props => {
       backToIndex(his);
     }
     if(imgBg){
-      getColorImage(imgBg, dispatchColor)
+      let proxyGoogle = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
+      //running from Proxy
+      getColorImage(proxyGoogle+encodeURIComponent(imgBg), dispatchColor)
     }
   }, [imgBg]);
 
