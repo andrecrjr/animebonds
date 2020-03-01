@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { EachCharacter } from "./Characters";
 import { CharPage } from "./CharPage";
 import { Switch, Route, useLocation } from "react-router-dom";
@@ -12,7 +12,7 @@ export const MainRoutes = ({ data, setImg }) => {
       <CSSTransition
         key={loc.key}
         classNames="char"
-        timeout={{ enter: 2000, exit: 300 }}
+        timeout={{ enter: 2000, exit: 0 }}
         unmountOnExit
       >
         <Switch location={loc}>

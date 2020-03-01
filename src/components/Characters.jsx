@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import tsundere from '../img/tsundere-girl.png'
 
 export const EachCharacter = props => {
   const { edges } = props.data.Media.characters;
@@ -23,8 +22,6 @@ export const EachCharacter = props => {
       </div>
     );
   } else {
-    return (<React.Fragment>
-      <img src={tsundere} class="container--tsundere"/>
-    </React.Fragment>)
+    return null;
   }
-}
+};

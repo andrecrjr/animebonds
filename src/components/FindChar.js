@@ -4,7 +4,7 @@ import { MainRoutes } from "./AppRoutes";
 import { useHistory } from "react-router-dom";
 import { SEARCH_ANIME_QUERY } from "../helper/gqlqueries";
 import { getColorImage, colorReduce } from "../helper/";
-import wallpaper_anime from '../img/anime-wall.jpg';
+import tsundere from "../img/tsundere-girl.png";
 
 const FindChar = props => {
   const [anime, setAnime] = useState("naruto");
@@ -14,7 +14,6 @@ const FindChar = props => {
   });
   const his = useHistory();
   const [colors, dispatchColor] = React.useReducer(colorReduce);
-
 
   const findAnime = e => {
     e.preventDefault();
@@ -27,23 +26,24 @@ const FindChar = props => {
     if (paramsBusca.get("from") === "index") {
       backToIndex(his);
     }
-    if(imgBg){
-      let proxyGoogle = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
+    if (imgBg) {
+      let proxyGoogle =
+        "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=";
       //running from Proxy
-      getColorImage(proxyGoogle+encodeURIComponent(imgBg), dispatchColor)
+      getColorImage(proxyGoogle + encodeURIComponent(imgBg), dispatchColor);
     }
-  }, [imgBg]);
+  }, [imgBg, his]);
 
   return (
     <>
       <section
         className="container--general"
         style={{
-          backgroundImage: `url(${imgBg ? imgBg : wallpaper_anime})`,
+          backgroundImage: `url(${imgBg ? imgBg : null})`,
+          background: "black",
           minHeight: "100vh"
         }}
       >
-        
         <div className="block--search">
           <h1
             style={{
@@ -52,14 +52,16 @@ const FindChar = props => {
           >
             Anime List Search
           </h1>
-          <AnimeForm findAnime={findAnime} anime={anime} setAnime={setAnime} backToIndex={backToIndex} his={his}/>
+          <AnimeForm
+            findAnime={findAnime}
+            anime={anime}
+            setAnime={setAnime}
+            backToIndex={backToIndex}
+            his={his}
+          />
         </div>
-        {anime === "" ? (
-          <h2 className="char__waiting">Waiting for your anime, senpai!</h2>
-        ) : (
-          ``
-        )}
-        <NameAnime data={data} anime={anime} color={colors}/>
+        {anime === "" ? <NotFound /> : ``}
+        <NameAnime data={data} anime={anime} color={colors} />
         {loading ? (
           <h2 className="container--loading">Loading</h2>
         ) : (
@@ -74,31 +76,41 @@ const FindChar = props => {
   );
 };
 
+const NotFound = () => (
+  <>
+    <h2 className="char__waiting">Waiting for your anime, senpai!</h2>
+    <img src={tsundere} class="container--tsundere" />
+  </>
+);
+
 const NameAnime = ({ data, anime, color }) =>
   data !== undefined && anime !== "" ? (
-    <h1 className="container--chars__title" style={{color:`${color ? color[0] : `#000`}`}}>{`${data.Media.title.english}`}</h1>
+    <h1
+      className="container--chars__title"
+      style={{ color: `${color ? color[0] : `#000`}` }}
+    >{`${data.Media.title.english}`}</h1>
   ) : (
     ``
   );
 
-const AnimeForm = ({findAnime,  setAnime, backToIndex, anime, his}) =>{
+const AnimeForm = ({ findAnime, setAnime, backToIndex, anime, his }) => {
   return (
     <form onSubmit={findAnime}>
-            <input
-              type="text"
-              value={anime}
-              onChange={e => {
-                setAnime(e.target.value);
-              }}
-              onClick={e => {
-                if (e.target.value.length > 0) {
-                  setAnime("");
-                }
-                backToIndex(his);
-              }}
-            />
-          </form>
-  )
-}
+      <input
+        type="text"
+        value={anime}
+        onChange={e => {
+          setAnime(e.target.value);
+        }}
+        onClick={e => {
+          if (e.target.value.length > 0) {
+            setAnime("");
+          }
+          backToIndex(his);
+        }}
+      />
+    </form>
+  );
+};
 
 export default FindChar;

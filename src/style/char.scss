@@ -1,24 +1,31 @@
-.char{
-  &__container{
-    display:flex;
+.char {
+  &__container {
+    display: flex;
     flex-direction: column;
-    background:rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 5px 1px black;
     align-items: center;
     width: 80%;
     justify-content: center;
-    margin:0 auto;
-    img{
-      width:auto;
-      height:auto;
+    margin: 0 auto;
+    img {
+      width: auto;
+      height: auto;
     }
   }
-  &__name{
-    font-size:2em;
+  &__name {
+    font-size: 2em;
   }
-  &__description{
-    padding:8px;
-    font-family: 'Times New Roman', serif;
-    font-size:28px;
+  &__description {
+    padding: 8px;
+    font-family: "Times New Roman", serif;
+    font-size: 28px;
+  }
+  &__waiting {
+    font-size: 4.5em;
+    color: white;
+    padding-top: 25px;
+    font-weight: 500;
+    -webkit-text-stroke: rgba(0, 0, 0, 0.89) 1px;
   }
 }
