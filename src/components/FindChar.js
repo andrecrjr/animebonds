@@ -22,10 +22,6 @@ const FindChar = (props) => {
   const backToIndex = (history) => history.push("/");
 
   React.useEffect(() => {
-    var paramsBusca = new URLSearchParams(his.location.search);
-    if (paramsBusca.get("from") === "index") {
-      backToIndex(his);
-    }
     if (imgBg) {
       let proxyGoogle =
         "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=";
@@ -52,7 +48,7 @@ const FindChar = (props) => {
               color: `${colors ? colors[0] : `#000`}`,
             }}
           >
-            Anime List Search
+            Anime Find!
           </h1>
           <AnimeForm
             findAnime={findAnime}

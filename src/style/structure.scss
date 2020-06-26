@@ -1,5 +1,4 @@
 @mixin shadow_name() {
-  text-shadow: -2px 1px 2px rgba(61, 61, 61, 0.7);
   -webkit-text-stroke: rgba(0, 0, 0, 0.533) 1px;
 }
 
@@ -107,14 +106,13 @@
   }
 }
 
+//pagination animation fron react transition
 .char-enter {
-  transform: translateX(350px);
   opacity: 0;
   overflow-x: hidden;
 }
 
 .char-enter-active {
-  transform: translateX(0);
   opacity: 1;
   overflow-x: hidden;
   transition: all 1s ease-in;

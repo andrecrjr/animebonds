@@ -1,7 +1,7 @@
 {
-  "name": "anime-search",
-  "version": "1.0.0",
-  "description": "",
+  "name": "anime-find",
+  "version": "1.1.0",
+  "description": "The best way to find your fav characters!",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {

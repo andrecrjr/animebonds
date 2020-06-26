@@ -12,6 +12,14 @@ export const CHAR_ANIME = gql`
         large
       }
       description
+      media {
+        nodes {
+          title {
+            english
+          }
+          bannerImage
+        }
+      }
     }
   }
 `;
