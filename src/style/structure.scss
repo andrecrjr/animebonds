@@ -99,6 +99,7 @@
   .container {
     &--chars {
       width: 75%;
+      margin: 0 auto;
       .box__char {
         width: 15%;
       }
@@ -108,15 +109,17 @@
 
 .char-enter {
   transform: translateX(350px);
+  opacity: 0;
   overflow-x: hidden;
 }
 
 .char-enter-active {
   transform: translateX(0);
+  opacity: 1;
   overflow-x: hidden;
   transition: all 1s ease-in;
 }
 
 .char-exit .char-exit-done {
-  display: none;
+  opacity: 0;
 }

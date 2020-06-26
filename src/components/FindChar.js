@@ -6,20 +6,20 @@ import { SEARCH_ANIME_QUERY } from "../helper/gqlqueries";
 import { getColorImage, colorReduce } from "../helper/";
 import tsundere from "../img/tsundere-girl.png";
 
-const FindChar = props => {
+const FindChar = (props) => {
   const [anime, setAnime] = useState("naruto");
   const [imgBg, setImg] = useState("");
   const { loading, error, data } = useQuery(SEARCH_ANIME_QUERY, {
-    variables: { name: anime || anime !== null }
+    variables: { name: anime || anime !== null },
   });
   const his = useHistory();
   const [colors, dispatchColor] = React.useReducer(colorReduce);
 
-  const findAnime = e => {
+  const findAnime = (e) => {
     e.preventDefault();
   };
 
-  const backToIndex = history => history.push("/");
+  const backToIndex = (history) => history.push("/");
 
   React.useEffect(() => {
     var paramsBusca = new URLSearchParams(his.location.search);
@@ -34,6 +34,8 @@ const FindChar = props => {
     }
   }, [imgBg, his]);
 
+  console.log(data);
+
   return (
     <>
       <section
@@ -41,13 +43,13 @@ const FindChar = props => {
         style={{
           backgroundImage: `url(${imgBg ? imgBg : null})`,
           background: "black",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
       >
         <div className="block--search">
           <h1
             style={{
-              color: `${colors ? colors[0] : `#000`}`
+              color: `${colors ? colors[0] : `#000`}`,
             }}
           >
             Anime List Search
@@ -61,11 +63,12 @@ const FindChar = props => {
           />
         </div>
         {anime === "" ? <NotFound /> : ``}
-        <NameAnime data={data} anime={anime} color={colors} />
+
         {loading ? (
           <h2 className="container--loading">Loading</h2>
         ) : (
           <>
+            <NameAnime data={data} anime={anime} color={colors} />
             <MainRoutes data={data} setImg={setImg} />
           </>
         )}
@@ -84,7 +87,7 @@ const NotFound = () => (
 );
 
 const NameAnime = ({ data, anime, color }) =>
-  data !== undefined && anime !== "" ? (
+  data && data.Media.characters.edges.length !== 0 ? (
     <h1
       className="container--chars__title"
       style={{ color: `${color ? color[0] : `#000`}` }}
@@ -99,10 +102,10 @@ const AnimeForm = ({ findAnime, setAnime, backToIndex, anime, his }) => {
       <input
         type="text"
         value={anime}
-        onChange={e => {
+        onChange={(e) => {
           setAnime(e.target.value);
         }}
-        onClick={e => {
+        onClick={(e) => {
           if (e.target.value.length > 0) {
             setAnime("");
           }
