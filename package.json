@@ -1,7 +1,7 @@
 {
-  "name": "anime-find",
-  "version": "1.1.0",
-  "description": "The best way to find your fav characters!",
+  "name": "AnimeBond",
+  "version": "1.0",
+  "description": "A new way to watch Anime!",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
