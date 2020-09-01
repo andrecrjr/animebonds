@@ -1,25 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+@import "./definitions.scss";
 
 @import url("https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap");
 
 body {
-  font-family: "Ma Shan Zheng", "Tahoma", sans-serif;
+  font-family: "Ma Shan Zheng", "Arial", sans-serif;
+  background: $black;
+  color: $white;
 }
 
-img {
-  width: 110px;
-  height: 120px;
-  border-radius: 35px;
-}
-
-.container--general {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@import './structure.scss';
-@import './char.scss';
+@import "./components/list-row.scss";
