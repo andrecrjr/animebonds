@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/client";
 import { ANIME_CATEGORIES } from "../../helper";
 
 function ListRows() {
-  const { loading, error, data } = useQuery(ANIME_CATEGORIES);
+  const { loading, data } = useQuery(ANIME_CATEGORIES);
   console.log(data);
   if (loading) {
     return <h1>Loading data...</h1>;

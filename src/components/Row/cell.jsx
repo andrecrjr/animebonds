@@ -12,10 +12,13 @@ function Cells({ data }) {
 }
 
 function Cell({ item, index }) {
-  console.log(item.coverImage.medium);
   return (
     <section className="list__cell" key={index}>
-      <img src={item.coverImage.large} className="list__cell--item" />
+      <img
+        src={item.coverImage.large}
+        className={`list__cell--item ${index}`}
+        alt={index}
+      />
     </section>
   );
 }
