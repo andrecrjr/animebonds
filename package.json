@@ -1,6 +1,6 @@
 {
   "name": "animebond",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "A new way to watch Anime!",
   "keywords": [],
   "main": "src/index.js",
