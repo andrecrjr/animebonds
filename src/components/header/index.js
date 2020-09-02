@@ -10,7 +10,6 @@ export function Header() {
         className="header"
         style={{
           background: `url('${state.selected.bannerImage}') no-repeat top center fixed`,
-          zIndex: "-1",
         }}
       >
         <h1 className="header--logo">AnimeBonds</h1>
