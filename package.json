@@ -19,6 +19,9 @@
     "react-scripts": "3.0.1",
     "react-transition-group": "4.3.0"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "devDependencies": {
     "typescript": "3.3.3"
   },
