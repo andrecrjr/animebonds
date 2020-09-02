@@ -1,0 +1,55 @@
+@import "./includes/header-responsive.scss";
+
+header {
+  &.header {
+    display: flex;
+    height: $header-height;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:after {
+      content: "";
+      background: -webkit-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6) 59%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.header {
+  &--logo {
+    position: absolute;
+    left: 25px;
+    top: 30px;
+    font-size: 1.5rem;
+  }
+
+  &__anime {
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: space-between;
+    &--title {
+      justify-self: flex-end;
+      padding-left: 15%;
+      font-size: $header-title-mobile;
+      text-shadow: 0 0 5px black;
+      font-weight: 350;
+    }
+    &--image {
+      padding-left: 15%;
+    }
+  }
+}
