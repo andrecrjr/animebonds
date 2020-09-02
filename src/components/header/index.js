@@ -3,21 +3,20 @@ import { AnimeContext } from "../contexts/";
 
 export function Header() {
   const { state } = useContext(AnimeContext);
-  console.log(state);
-  if (Object.keys(state.selected).length > 0) {
-    return (
-      <header
-        className="header"
-        style={{
-          background: `url('${state.selected.bannerImage}') no-repeat top center fixed`,
-        }}
-      >
-        <h1 className="header--logo">AnimeBonds</h1>
+
+  return (
+    <header
+      className="header"
+      style={{
+        backgroundImage: `url('${state && state.selected.bannerImage}')`,
+      }}
+    >
+      <h1 className="header--logo">AnimeBonds</h1>
+      {Object.keys(state.selected).length > 0 && (
         <HeaderAnime anime={state.selected} />
-      </header>
-    );
-  }
-  return null;
+      )}
+    </header>
+  );
 }
 
 const HeaderAnime = ({ anime }) => {
