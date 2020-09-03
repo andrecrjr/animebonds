@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap");
+
 $black: #000;
 $white: rgb(214, 212, 212);
 $photo-height: 200px;
 $red-logo: red;
-$header-height: 22rem;
+$header-height: 26rem;
+@mixin title-font-2 {
+  font-family: "Ma Shan Zheng", "Arial", sans-serif;
+}
+@mixin title-font-1 {
+  font-family: "Grandstander", cursive;
+  font-weight: bold;
+}
+
+@mixin top-padding-cover($value: 4rem) {
+  padding-top: calc(#{$header-height} - #{$value});
+}

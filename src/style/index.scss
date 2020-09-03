@@ -5,12 +5,10 @@
 }
 @import "./definitions.scss";
 
-@import url("https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap");
-
 body {
-  font-family: "Ma Shan Zheng", "Arial", sans-serif;
   background: $black;
   color: $white;
+  @include title-font-1;
 }
 
 @import "./components/list-row.scss";

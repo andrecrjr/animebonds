@@ -16,7 +16,7 @@ header {
       background: -webkit-linear-gradient(
         top,
         rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.04) 50%,
+        rgba(0, 0, 0, 0.27) 50%,
         rgba(0, 0, 0, 1) 100%
       );
       position: absolute;
@@ -31,29 +31,72 @@ header {
 .header {
   &--logo {
     position: absolute;
-    left: 25px;
+    right: 25px;
     top: 30px;
-    font-size: 1.8rem;
-    text-shadow: 0 0 5px rgba(194, 37, 37, 0.575);
+    font-size: 1.2rem;
   }
 
   &__anime {
     width: 100%;
     height: 85%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     align-items: center;
     justify-items: space-between;
+    &--title-area {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
     &--title {
       color: white;
+      text-align: center;
       justify-self: flex-end;
-      padding-left: 15%;
       font-size: $header-title-mobile;
-      text-shadow: 0 0 8px black, 0 0 1px black;
-      font-weight: lighter;
+      text-shadow: 0 0 5px black, 0 0 20px black;
+      line-height: $line-heigth-title-mobile;
+      font-weight: bold;
+      margin-bottom: 25px;
     }
     &--image {
-      padding-left: 15%;
+      justify-self: flex-end;
+      width: 80%;
+      padding-right: 5%;
+    }
+    &--more {
+      width: 55%;
+      padding: 12px;
+      align-self: center;
+      border: 0;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0 0 5px black;
+      text-shadow: 0 0 5px black;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}
+
+@media (min-width: 669px) {
+  .header {
+    &__anime {
+      &--image {
+        width: 60%;
+      }
+      &--more {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (min-width: 981px) {
+  .header {
+    &__anime {
+      &--image {
+        width: 40%;
+      }
     }
   }
 }

@@ -5,9 +5,9 @@ export const ANIME_CATEGORIES = gql`
   query {
     action: Page {
       media(
-        genre_in: "action"
-        genre_not_in: "romance"
-        averageScore_greater: 85
+        genre_in: "Action"
+        genre_not_in: ["sci-fi"]
+        averageScore_greater: 76
         type: ANIME
       ) {
         title {
@@ -22,14 +22,34 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
+        description
       }
     }
     romance: Page {
       media(
         genre_in: "romance"
-        genre_not_in: "action"
+        genre_not_in: ["action", "sports"]
         type: ANIME
-        averageScore_greater: 85
+        popularity_greater: 85
+      ) {
+        title {
+          english
+          userPreferred
+        }
+        coverImage {
+          large
+          medium
+          color
+        }
+        bannerImage
+      }
+    }
+    drama: Page {
+      media(
+        genre_in: "drama"
+        genre_not_in: ["action"]
+        type: ANIME
+        popularity_greater: 85
       ) {
         title {
           english
@@ -47,7 +67,7 @@ export const ANIME_CATEGORIES = gql`
       media(
         genre_in: "sci-fi"
         type: ANIME
-        averageScore_greater: 85
+        averageScore_greater: 80
         sort: TRENDING
       ) {
         title {

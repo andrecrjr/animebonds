@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Cells from "./cell";
 function Row({ title, data }) {
-  let translation = 0;
-
+  const [carousel, setCarousel] = useState(0);
   const moveNext = (e) => {
     e.preventDefault();
-    translation = carouselLogic.control(translation, title, e);
+    carouselLogic.control(title, e, true, carousel, setCarousel);
   };
 
   const moveBefore = (e) => {
     e.preventDefault();
-    translation = carouselLogic.control(translation, title, e, false);
+    carouselLogic.control(title, e, false, carousel, setCarousel);
   };
 
   return (
@@ -30,23 +29,26 @@ function Row({ title, data }) {
 }
 
 const carouselLogic = {
-  control: (translation, title, e, next = true) => {
+  control: (title, e, next = true, carousel, setCarousel) => {
     let slideCategory = `.list__wrapper--slide.${title.toLowerCase()}`;
     let wrapperCategory = `.list__wrapper.${title.toLowerCase()}`;
     let widthSlide = document.querySelector(slideCategory).clientWidth;
     let widthWrapper = document.querySelector(wrapperCategory).clientWidth;
-    if (translation >= 0 && translation <= widthSlide - widthWrapper) {
+    //get second cell with the offsetLeft
+    let cell = document
+      .querySelector(wrapperCategory)
+      .querySelectorAll(".list__cell")[1];
+    if (carousel >= 0 && carousel <= widthSlide - widthWrapper) {
       if (next) {
-        translation = Math.abs(translation + 175);
+        setCarousel(carousel + cell.offsetLeft);
       }
     }
-    if (!next && translation >= 0 && translation <= widthSlide + widthWrapper) {
-      translation = Math.abs(translation - 175);
+    if (!next && carousel >= 0 && carousel <= widthSlide + widthWrapper) {
+      setCarousel(Math.abs(carousel - cell.offsetLeft));
     }
     document
       .querySelector(`.list__wrapper--slide.${title.toLowerCase()}`)
-      .setAttribute("style", `transform: translateX(-${translation}px)`);
-    return translation;
+      .setAttribute("style", `transform: translateX(-${carousel}px)`);
   },
 };
 
