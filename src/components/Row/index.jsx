@@ -38,9 +38,10 @@ const carouselLogic = {
     if (translation >= 0 && translation <= widthSlide - widthWrapper) {
       if (next) {
         translation = Math.abs(translation + 175);
-      } else {
-        translation = Math.abs(translation - 175);
       }
+    }
+    if (!next && translation >= 0 && translation <= widthSlide + widthWrapper) {
+      translation = Math.abs(translation - 175);
     }
     document
       .querySelector(`.list__wrapper--slide.${title.toLowerCase()}`)
