@@ -11,7 +11,7 @@
     "easygraphql-tester": "5.1.6",
     "graphql": "14.5.4",
     "jest": "24.7.1",
-    "node-sass": "4.13.0",
+    "node-sass": "4.14.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-palette": "^1.0.1",
