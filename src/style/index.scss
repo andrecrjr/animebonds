@@ -11,5 +11,11 @@ body {
   @include title-font-1;
 }
 
+.list {
+  &__page {
+    @include top-padding-cover(5rem);
+  }
+}
+
 @import "./components/list-row.scss";
 @import "./components/header.scss";

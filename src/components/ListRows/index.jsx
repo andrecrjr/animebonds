@@ -12,9 +12,12 @@ function ListRows() {
   return (
     <section className="list__row">
       <Row title="Action" data={data ? data["action"] : null} />
+      <Row title="Fantasy" data={data ? data["fantasy"] : null} />
       <Row title="Drama" data={data ? data["drama"] : null} />
+      <Row title="adventure" data={data ? data["adventure"] : null} />
       <Row title="Romance" data={data ? data["romance"] : null} />
       <Row title="Sci-fi" data={data ? data["scifi"] : null} />
+      <Row title="Sports" data={data ? data["sports"] : null} />
     </section>
   );
 }

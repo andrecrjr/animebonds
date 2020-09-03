@@ -11,7 +11,9 @@ export default function Main() {
     <main>
       <AnimeContext.Provider value={{ state, dispatchAnime }}>
         <Header />
-        <ListRows />
+        <section className="list__page">
+          <ListRows />
+        </section>
       </AnimeContext.Provider>
     </main>
   );
