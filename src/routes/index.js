@@ -1,8 +1,8 @@
 import React, { useReducer } from "react";
 
 import { AnimeContext } from "../components/contexts";
-import { Header } from "../components/Header/";
 import { AnimeReducer, initialState } from "../components/reducers/";
+import { Header } from "../components/Header";
 
 import ListRows from "../components/ListRows";
 import AnimePage from "./AnimeRoutes";
