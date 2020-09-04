@@ -34,7 +34,6 @@ export function Header() {
 
 const HeaderAnime = ({ anime }) => {
   const history = useHistory();
-  const body = document.querySelector("body");
   const redirectPage = (e, animeId) => {
     e.preventDefault();
     window.scroll(0, 500);
