@@ -1,8 +1,11 @@
 import React, { useReducer } from "react";
-import ListRows from "../components/ListRows";
+
 import { AnimeContext } from "../components/contexts";
-import { Header } from "../components/header";
+import { Header } from "../components/Header";
 import { AnimeReducer, initialState } from "../components/reducers/";
+
+import ListRows from "../components/ListRows";
+import AnimePage from "./AnimeRoutes";
 
 export default function Main() {
   const [state, dispatchAnime] = useReducer(AnimeReducer, initialState);
@@ -11,7 +14,13 @@ export default function Main() {
     <main>
       <AnimeContext.Provider value={{ state, dispatchAnime }}>
         <Header />
-        <section className="list__page">
+        <section
+          className="list__page"
+          style={{
+            paddingTop: state.selected.cont === 0 && "0",
+          }}
+        >
+          <AnimePage />
           <ListRows />
         </section>
       </AnimeContext.Provider>

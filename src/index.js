@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import Main from "./routes";
+import { BrowserRouter } from "react-router-dom";
 import "./style/index.scss";
 
 const client = new ApolloClient({
@@ -11,8 +12,10 @@ const client = new ApolloClient({
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <Main />
-  </ApolloProvider>,
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <Main />
+    </ApolloProvider>
+  </BrowserRouter>,
   rootElement
 );

@@ -7,8 +7,9 @@ export const ANIME_CATEGORIES = gql`
       media(
         genre_in: "Action"
         genre_not_in: ["sci-fi"]
-        averageScore_greater: 70
+        averageScore_greater: 77
         type: ANIME
+        format: TV
       ) {
         title {
           english
@@ -22,7 +23,7 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
-        description
+        id
       }
     }
     romance: Page {
@@ -31,6 +32,7 @@ export const ANIME_CATEGORIES = gql`
         genre_not_in: ["action", "sports"]
         type: ANIME
         popularity_greater: 85
+        format: TV
       ) {
         title {
           english
@@ -42,6 +44,7 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
+        id
       }
     }
     drama: Page {
@@ -49,6 +52,7 @@ export const ANIME_CATEGORIES = gql`
         genre_in: "drama"
         genre_not_in: ["action"]
         type: ANIME
+        format: TV
         popularity_greater: 84
       ) {
         title {
@@ -61,6 +65,7 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
+        id
       }
     }
     scifi: Page {
@@ -69,6 +74,7 @@ export const ANIME_CATEGORIES = gql`
         type: ANIME
         averageScore_greater: 85
         sort: TRENDING
+        format: TV
       ) {
         title {
           romaji
@@ -82,6 +88,7 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
+        id
       }
     }
     adventure: Page {
@@ -90,6 +97,7 @@ export const ANIME_CATEGORIES = gql`
         type: ANIME
         averageScore_greater: 80
         sort: TRENDING
+        format: TV
       ) {
         title {
           romaji
@@ -103,6 +111,7 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
+        id
       }
     }
     sports: Page {
@@ -110,6 +119,7 @@ export const ANIME_CATEGORIES = gql`
         genre_in: "sports"
         type: ANIME
         averageScore_greater: 80
+        format: TV
         sort: TRENDING
       ) {
         title {
@@ -124,6 +134,7 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
+        id
       }
     }
     fantasy: Page {
@@ -132,6 +143,7 @@ export const ANIME_CATEGORIES = gql`
         type: ANIME
         averageScore_greater: 80
         sort: TRENDING
+        format: TV
       ) {
         title {
           romaji
@@ -145,6 +157,43 @@ export const ANIME_CATEGORIES = gql`
           color
         }
         bannerImage
+        id
+      }
+    }
+  }
+`;
+
+export const ANIME_PAGE = gql`
+  query getAnimeData($animeId: Int) {
+    Media(id: $animeId) {
+      title {
+        english
+        userPreferred
+      }
+      coverImage {
+        large
+        medium
+        color
+      }
+      description
+      episodes
+      startDate {
+        year
+        month
+      }
+      characters(role: MAIN) {
+        edges {
+          id
+          node {
+            name {
+              full
+              native
+            }
+            image {
+              medium
+            }
+          }
+        }
       }
     }
   }

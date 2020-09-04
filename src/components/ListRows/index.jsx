@@ -5,6 +5,7 @@ import { ANIME_CATEGORIES } from "../../helper";
 
 function ListRows() {
   const { loading, data } = useQuery(ANIME_CATEGORIES);
+
   console.log(data);
   if (loading) {
     return <h1>Loading data...</h1>;

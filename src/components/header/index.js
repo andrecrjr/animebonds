@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { AnimeContext } from "../contexts/";
+import { AnimeContext } from "../contexts";
+import { useHistory } from "react-router-dom";
 
 export function Header() {
   const { state } = useContext(AnimeContext);
@@ -15,22 +16,30 @@ export function Header() {
         className="header--logo"
         style={{
           textShadowColor: `1px 2px 0px ${
-            Object.keys(state.selected).length > 0
-              ? state.selected.coverImage.color
-              : "white"
+            state.selected.cont > 0 ? state.selected.coverImage.color : "white"
           }`,
         }}
       >
         AnimeBonds
       </h1>
-      {Object.keys(state.selected).length > 0 && (
-        <HeaderAnime anime={state.selected} />
+      {state.selected.cont > 0 && (
+        <>
+          <HeaderAnime anime={state.selected} />
+          <div className="shadows"></div>
+        </>
       )}
     </header>
   );
 }
 
 const HeaderAnime = ({ anime }) => {
+  const history = useHistory();
+  const body = document.querySelector("body");
+  const redirectPage = (e, animeId) => {
+    e.preventDefault();
+    window.scroll(0, 500);
+    history.push(`/anime/${animeId}`);
+  };
   if (anime)
     return (
       <div className="header__anime">
@@ -46,8 +55,9 @@ const HeaderAnime = ({ anime }) => {
           <button
             className="header__anime--more"
             style={{ background: anime.coverImage.color }}
+            onClick={(e) => redirectPage(e, anime.id)}
           >
-            More About!
+            Read about!
           </button>
         </div>
       </div>

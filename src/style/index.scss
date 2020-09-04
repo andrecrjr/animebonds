@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 @import "./definitions.scss";
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: $black;
   color: $white;
@@ -19,3 +21,4 @@ body {
 
 @import "./components/list-row.scss";
 @import "./components/header.scss";
+@import "./components/anime-page.scss";
