@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 import { AnimeContext } from "../components/contexts";
 import { AnimeReducer, initialState } from "../components/reducers/";
-import { Header } from "../components/Header";
+import { HeaderTopo } from "../components/Header";
 
 import ListRows from "../components/ListRows";
 import AnimePage from "./AnimeRoutes";
@@ -13,7 +13,7 @@ export default function Main() {
   return (
     <main>
       <AnimeContext.Provider value={{ state, dispatchAnime }}>
-        <Header />
+        <HeaderTopo />
         <section
           className="list__page"
           style={{

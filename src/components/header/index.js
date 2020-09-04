@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AnimeContext } from "../contexts";
 import { useHistory } from "react-router-dom";
 
-export function Header() {
+export function HeaderTopo() {
   const { state } = useContext(AnimeContext);
   console.log(state);
   return (
