@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 export function Header() {
   const { state } = useContext(AnimeContext);
   const history = useHistory();
+
   const findAnime = (e) => {
     e.preventDefault();
     if (state.selected.cont > 0) {

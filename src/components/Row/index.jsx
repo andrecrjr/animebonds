@@ -1,35 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { PageContext } from '../contexts'
 import Cells from "./cell";
 function Row({ title, data, search = false }) {
   const [carousel, setCarousel] = useState(0);
+  const { pageState } = useContext(PageContext)
   const moveNext = (e) => {
     e.preventDefault();
-    carouselLogic.control(title, e, true, carousel, setCarousel);
+    carouselLogic.control(titleSection(title || pageState.search.textSearch), e, true, carousel, setCarousel);
   };
 
   const moveBefore = (e) => {
     e.preventDefault();
-    carouselLogic.control(title, e, false, carousel, setCarousel);
+    carouselLogic.control(titleSection(title || pageState.search.textSearch), e, false, carousel, setCarousel);
   };
+
+  const titleSection = (title) => {
+    console.log(title)
+    return title.toLowerCase().replace(/ /g, "-")
+  }
   return (
     <div className="list__section">
       <div className="list__title">{`${
-        search ? `Searching for ` : ""
-      }${title}`}</div>
+        typeof pageState !== "undefined" ? `Searching for ` : ""
+        }${title || pageState.search.textSearch}`}</div>
 
       <div className="list__section--next" onClick={moveNext}></div>
       <div className="list__section--next after" onClick={moveBefore}></div>
       <div className="list__section--shadow"></div>
 
       <div
-        className={`list__wrapper  ${title.toLowerCase().replace(/ /g, "-")}`}
+        className={`list__wrapper  ${titleSection(title || pageState.search.textSearch)}`}
       >
         <div
-          className={`list__wrapper--slide ${title
-            .toLowerCase()
-            .replace(/ /g, "-")}`}
+          className={`list__wrapper--slide ${titleSection(title || pageState.search.textSearch)}`}
         >
-          {data && <Cells data={data} search={search} searchTitle={title} />}
+          {data && <Cells data={data} />}
         </div>
       </div>
     </div>
@@ -38,9 +43,9 @@ function Row({ title, data, search = false }) {
 
 const carouselLogic = {
   control: (title, e, next = true, carousel, setCarousel) => {
-    let slugTitle = title.toLowerCase().replace(/ /g, "-");
-    let slideCategory = `.list__wrapper--slide.${slugTitle}`;
-    let wrapperCategory = `.list__wrapper.${slugTitle}`;
+
+    let slideCategory = `.list__wrapper--slide.${title}`;
+    let wrapperCategory = `.list__wrapper.${title}`;
 
     let widthSlide = document.querySelector(slideCategory).clientWidth;
     let widthWrapper = document.querySelector(wrapperCategory).clientWidth;
@@ -57,7 +62,7 @@ const carouselLogic = {
       setCarousel(Math.abs(carousel - cell.offsetLeft));
     }
     document
-      .querySelector(`.list__wrapper--slide.${slugTitle}`)
+      .querySelector(`.list__wrapper--slide.${title}`)
       .setAttribute("style", `transform: translateX(-${carousel}px)`);
   },
 };

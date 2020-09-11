@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { PageContext } from "../contexts";
 import Layout from "../Layout";
 import { useLazyQuery } from "@apollo/client";
 import Row from "../Row";
@@ -7,6 +8,8 @@ import { useLocation } from "react-router-dom";
 import { ANIME_SEARCH } from "../../helper";
 
 function AnimeBrowser() {
+  const { dispatchPageState } = useContext(PageContext);
+  
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const queryAnime =
@@ -18,14 +21,17 @@ function AnimeBrowser() {
   const [getAnimeName, { loading, data, error }] = useLazyQuery(ANIME_SEARCH, {
     variables: { animeFind: animeSearch },
   });
-  console.log(queryAnime);
   React.useEffect(() => {
     if (queryAnime !== "") {
+      dispatchPageState({
+        type: "SEARCH_ANIME",
+        payload: { search: true, textSearch: queryAnime },
+      });
       getAnimeName();
     }
-  }, [queryAnime, getAnimeName]);
+  }, [queryAnime, getAnimeName, dispatchPageState]);
   return (
-    <Layout search={true} animeSearch={animeSearch}>
+    <Layout>
       <section className="anime__page--search">
         <input
           type="text"
@@ -35,23 +41,27 @@ function AnimeBrowser() {
           onChange={(e) => {
             e.preventDefault();
             setAnimeFind(e.target.value);
+            dispatchPageState({
+              type: "SEARCH_ANIME",
+              payload: { search: true, textSearch: e.target.value },
+            });
             getAnimeName();
           }}
         />
         {loading && <h2 style={{ paddingTop: 25 }}>Searching</h2>}
         {error && <h2>Whoops there was a problem into your search!</h2>}
 
-        {data && <SearchRow data={data.Page} animeSearch={animeSearch} />}
+        {data && <SearchRow data={data.Page} />}
       </section>
     </Layout>
   );
 }
 
-const SearchRow = ({ animeSearch, data }) => {
+const SearchRow = ({ data }) => {
   if (data.media.length > 0)
     return (
       <section className="list__row">
-        <Row title={animeSearch} data={data} search={true} />
+        <Row data={data} />
       </section>
     );
 

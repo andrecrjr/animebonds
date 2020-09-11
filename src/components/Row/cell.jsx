@@ -1,38 +1,37 @@
 import React, { useContext } from "react";
-import { AnimeContext } from "../contexts/";
+import { AnimeContext, PageContext } from "../contexts/";
 import { useHistory } from "react-router-dom";
 
-function Cells({ data, search, searchTitle }) {
+function Cells({ data }) {
   return (
     <>
-      {data.media.map((item, index) => (
+      {data.media.map((item) => (
         <AnimeCell
           item={item}
           key={item.id}
           index={item.id}
-          search={search}
-          title={searchTitle}
         />
       ))}
     </>
   );
 }
 
-function AnimeCell({ item, index, search, title }) {
+function AnimeCell({ item, index }) {
   const { dispatchAnime } = useContext(AnimeContext);
+  const { pageState } = useContext(PageContext)
   const history = useHistory();
   return (
     <section
       className="list__cell"
       onClick={(e) => {
         e.preventDefault();
-        if (!search) {
+        if (typeof pageState !== "undefined" && pageState.search.search) {
+          history.push(`/anime/${item.id}`, {
+            animeBack: encodeURIComponent(pageState.search.textSearch),
+          });
+        } else {
           dispatchAnime({ type: "SELECT_ANIME", payload: item });
           window.scrollTo({ top: 0, behavior: "smooth" });
-        } else {
-          history.push(`/anime/${item.id}`, {
-            animeBack: encodeURIComponent(title),
-          });
         }
       }}
     >

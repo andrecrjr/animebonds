@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 
 export default (props) => {
   const history = useHistory();
-  console.log(history);
 
   const body = document.querySelector("body");
   useEffect(() => {
@@ -46,5 +45,6 @@ export default (props) => {
         {props.children}
       </div>
     </div>
+
   );
 };
