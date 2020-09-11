@@ -14,7 +14,7 @@ function Row({ title, data, search = false }) {
   return (
     <div className="list__section">
       <div className="list__title">{`${
-        search && `Searching for `
+        search ? `Searching for ` : ""
       }${title}`}</div>
 
       <div className="list__section--next" onClick={moveNext}></div>
@@ -22,12 +22,12 @@ function Row({ title, data, search = false }) {
       <div className="list__section--shadow"></div>
 
       <div
-        className={`list__wrapper  ${title.toLowerCase().replaceAll(" ", "-")}`}
+        className={`list__wrapper  ${title.toLowerCase().replace(/ /g, "-")}`}
       >
         <div
           className={`list__wrapper--slide ${title
             .toLowerCase()
-            .replace(" ", "-")}`}
+            .replace(/ /g, "-")}`}
         >
           {data && <Cells data={data} search={search} searchTitle={title} />}
         </div>
@@ -38,7 +38,7 @@ function Row({ title, data, search = false }) {
 
 const carouselLogic = {
   control: (title, e, next = true, carousel, setCarousel) => {
-    let slugTitle = title.toLowerCase().replaceAll(" ", "-");
+    let slugTitle = title.toLowerCase().replace(/ /g, "-");
     let slideCategory = `.list__wrapper--slide.${slugTitle}`;
     let wrapperCategory = `.list__wrapper.${slugTitle}`;
 
