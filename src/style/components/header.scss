@@ -13,6 +13,9 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
+  &__browser {
+    height: 0;
+  }
 }
 
 .shadows {
@@ -36,6 +39,14 @@ header {
     right: 25px;
     top: 30px;
     font-size: 1.2rem;
+  }
+
+  &--search {
+    position: absolute;
+    right: 25px;
+    top: 60px;
+    z-index: 20;
+    cursor: pointer;
   }
 
   &__anime {

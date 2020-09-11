@@ -19,6 +19,11 @@ body {
   }
 }
 
+.none {
+  display: none;
+}
+
 @import "./components/list-row.scss";
 @import "./components/header.scss";
 @import "./components/anime-page.scss";
+@import "./components/search-page.scss";

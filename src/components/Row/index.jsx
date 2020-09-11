@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cells from "./cell";
-function Row({ title, data }) {
+function Row({ title, data, search = false }) {
   const [carousel, setCarousel] = useState(0);
   const moveNext = (e) => {
     e.preventDefault();
@@ -11,17 +11,25 @@ function Row({ title, data }) {
     e.preventDefault();
     carouselLogic.control(title, e, false, carousel, setCarousel);
   };
-
   return (
     <div className="list__section">
-      <div className="list__title">{title}</div>
+      <div className="list__title">{`${
+        search && `Searching for `
+      }${title}`}</div>
+
       <div className="list__section--next" onClick={moveNext}></div>
       <div className="list__section--next after" onClick={moveBefore}></div>
       <div className="list__section--shadow"></div>
 
-      <div className={`list__wrapper  ${title.toLowerCase()}`}>
-        <div className={`list__wrapper--slide ${title.toLowerCase()}`}>
-          {data && <Cells data={data} />}
+      <div
+        className={`list__wrapper  ${title.toLowerCase().replaceAll(" ", "-")}`}
+      >
+        <div
+          className={`list__wrapper--slide ${title
+            .toLowerCase()
+            .replace(" ", "-")}`}
+        >
+          {data && <Cells data={data} search={search} searchTitle={title} />}
         </div>
       </div>
     </div>
@@ -30,8 +38,10 @@ function Row({ title, data }) {
 
 const carouselLogic = {
   control: (title, e, next = true, carousel, setCarousel) => {
-    let slideCategory = `.list__wrapper--slide.${title.toLowerCase()}`;
-    let wrapperCategory = `.list__wrapper.${title.toLowerCase()}`;
+    let slugTitle = title.toLowerCase().replaceAll(" ", "-");
+    let slideCategory = `.list__wrapper--slide.${slugTitle}`;
+    let wrapperCategory = `.list__wrapper.${slugTitle}`;
+
     let widthSlide = document.querySelector(slideCategory).clientWidth;
     let widthWrapper = document.querySelector(wrapperCategory).clientWidth;
     //get second cell with the offsetLeft
@@ -47,7 +57,7 @@ const carouselLogic = {
       setCarousel(Math.abs(carousel - cell.offsetLeft));
     }
     document
-      .querySelector(`.list__wrapper--slide.${title.toLowerCase()}`)
+      .querySelector(`.list__wrapper--slide.${slugTitle}`)
       .setAttribute("style", `transform: translateX(-${carousel}px)`);
   },
 };

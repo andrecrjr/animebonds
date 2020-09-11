@@ -4,10 +4,18 @@ import { useHistory } from "react-router-dom";
 
 export function Header() {
   const { state } = useContext(AnimeContext);
-  console.log(state);
+  const history = useHistory();
+  const findAnime = (e) => {
+    e.preventDefault();
+    if (state.selected.cont > 0) {
+      window.scroll(0, 300);
+    }
+    history.push("/browser");
+  };
+
   return (
     <header
-      className="header"
+      className={`header${state.selected.cont > 0 ? "" : `__browser`}`}
       style={{
         backgroundImage: `url('${state && state.selected.bannerImage}')`,
       }}
@@ -15,13 +23,21 @@ export function Header() {
       <h1
         className="header--logo"
         style={{
-          textShadowColor: `1px 2px 0px ${
+          textShadow: `0px 0px 6px ${
             state.selected.cont > 0 ? state.selected.coverImage.color : "white"
           }`,
         }}
       >
         AnimeBonds
       </h1>
+      <span
+        className="header--search"
+        role="img"
+        aria-label="search"
+        onClick={(e) => findAnime(e)}
+      >
+        🔎
+      </span>
       {state.selected.cont > 0 && (
         <>
           <HeaderAnime anime={state.selected} />

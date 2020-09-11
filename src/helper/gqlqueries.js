@@ -222,7 +222,30 @@ export const CHAR_ANIME = gql`
   }
 `;
 
-export const SEARCH_ANIME_QUERY = gql`
+export const ANIME_SEARCH = gql`
+  query($animeFind: String) {
+    Page {
+      media(search: $animeFind, popularity_greater: 80, type: ANIME) {
+        title {
+          romaji
+          english
+          native
+          userPreferred
+        }
+        id
+        description
+        coverImage {
+          large
+          medium
+          color
+        }
+        bannerImage
+      }
+    }
+  }
+`;
+
+export const SEARCH_ANIME_CHAR_QUERY = gql`
   query($name: String) {
     Media(search: $name) {
       title {
