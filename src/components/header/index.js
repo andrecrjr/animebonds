@@ -11,6 +11,8 @@ export function Header() {
     if (state.selected.cont > 0) {
       window.scroll(0, 300);
     }
+    if(document.querySelector("header").classList.contains("larger--height")){
+    document.querySelector("header.header").classList.remove("larger--height");}
     history.push("/browser");
   };
 
@@ -50,11 +52,26 @@ export function Header() {
 }
 
 const HeaderAnime = ({ anime }) => {
+  
   const history = useHistory();
+  React.useEffect(()=>{
+    document
+    .querySelector("header")
+    .classList.remove("larger--height");
+  },[anime])
+
+  const desktopOpen = () => {
+    if (window.innerWidth >= 661) {
+      document
+        .querySelector("header.header")
+        .classList.toggle("larger--height");
+    }
+  };
   const redirectPage = (e, animeId) => {
     e.preventDefault();
-    window.scroll(0, 500);
     history.push(`/anime/${animeId}`);
+    window.scroll(0, 500);
+    desktopOpen();
   };
   if (anime)
     return (

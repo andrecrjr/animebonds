@@ -14,6 +14,7 @@ export default (props) => {
   const closePage = (e) => {
     e.preventDefault();
     body.classList.remove("open--anime-page");
+    document.querySelector("header").classList.remove("larger--height");
     window.scrollTo({ top: 0, behavior: "smooth" });
     history.push("/");
   };

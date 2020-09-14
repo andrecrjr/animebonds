@@ -4,7 +4,7 @@ import { AnimeContext } from "../components/contexts";
 import { AnimeReducer, initialState } from "../components/reducers/";
 import { Header } from "../components/header";
 
-import ListRows from "../components/ListRows";
+import GenreList from "../components/GenreList";
 import AnimePage from "./AnimeRoutes";
 
 export default function Main() {
@@ -21,7 +21,7 @@ export default function Main() {
           }}
         >
           <AnimePage />
-          <ListRows />
+          <GenreList />
         </section>
       </AnimeContext.Provider>
     </main>

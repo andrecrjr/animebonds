@@ -31,6 +31,8 @@ function AnimeCell({ item, index }) {
           });
         } else {
           dispatchAnime({ type: "SELECT_ANIME", payload: item });
+          
+          history.push("/");
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
       }}

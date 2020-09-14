@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { PageContext } from "../contexts";
 import Layout from "../Layout";
 import { useLazyQuery } from "@apollo/client";
-import Row from "../Row";
+import { CarouselRow } from "../Row/CarouselRow";
 import { useLocation } from "react-router-dom";
 
 import { ANIME_SEARCH } from "../../helper";
@@ -61,7 +61,7 @@ const SearchRow = ({ data }) => {
   if (data.media.length > 0)
     return (
       <section className="list__row">
-        <Row data={data} />
+        <CarouselRow data={data} />
       </section>
     );
 

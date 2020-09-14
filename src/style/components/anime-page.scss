@@ -21,8 +21,7 @@
       padding-left: 25px;
       font-size: 2rem;
       cursor: pointer;
-      z-index: 50;
-      z-index: 50;
+      z-index: 20;
       position: relative;
     }
 
@@ -31,6 +30,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      z-index:5;
       &.cover {
         width: 10rem;
       }
