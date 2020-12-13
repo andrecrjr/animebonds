@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "prepare-schema": "npx get-graphql-schema https://graphql.anilist.co > schema.json"
+    "prepare-schema": "npx get-graphql-schema https://graphql.anilist.co > schema.json",
+    "deploy:surge": "yarn build && cd ./build && copy index.html 200.html && surge . animebonds.surge.sh"
   },
   "browserslist": [
     ">0.2%",
