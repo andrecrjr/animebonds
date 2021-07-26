@@ -13,6 +13,7 @@
     margin: 0 25px;
     margin-top: 25px;
     position: relative;
+
     &--shadow {
       width: 60px;
       height: 90%;
@@ -64,6 +65,10 @@
       display: inline-flex;
       align-items: center;
       transition: all 300ms ease-in;
+      &[data-load="loading"] {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
   &__cell {

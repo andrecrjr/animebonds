@@ -8,16 +8,15 @@ export function GenreRow({ genre }) {
     variables: { genre: genre.animeGenre, notGenre: genre.notGenre },
   });
 
-  if (loading) {
-    return <h1>Loading {genre.animeGenre} data from AniList...</h1>;
-  }
-
-  if (data)
-    return (
-      <CarouselRow title={genre.animeGenre} data={data.Page} search={false} />
-    );
-
   if (error) {
     return <h1>Some problem with {genre.animeGenre} data from anilist!</h1>;
   }
+  return (
+    <CarouselRow
+      loading={loading}
+      title={genre.animeGenre}
+      data={data?.Page}
+      search={false}
+    />
+  );
 }

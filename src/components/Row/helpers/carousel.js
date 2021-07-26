@@ -18,8 +18,9 @@ export const moveBefore = (e, title, carousel, setCarousel) => {
 
 const carouselLogic = {
   control: (e, title, next = true, carousel, setCarousel) => {
-    let slideCategory = `.list__wrapper--slide.${title}`;
-    let wrapperCategory = `.list__wrapper.${title}`;
+    let genre = `[data-genre=${title}]`;
+    let slideCategory = `.list__wrapper--slide${genre}`;
+    let wrapperCategory = `.list__wrapper${genre}`;
 
     let widthSlide = document.querySelector(slideCategory).clientWidth;
     let widthWrapper = document.querySelector(wrapperCategory).clientWidth;
