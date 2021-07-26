@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/client";
 import { ANIME_PAGE } from "../../helper";
 import { useParams } from "react-router-dom";
+import { AnimeProfileChar } from "./AnimeProfileChar";
 import Layout from "../Layout";
 
 function AnimePage(props) {
@@ -12,35 +13,39 @@ function AnimePage(props) {
   });
 
   if (loading) {
-    return <div className="anime__page">Loading anime, just wait a bit!</div>;
+    return <div className='anime__page'>Loading anime, just wait a bit!</div>;
   }
 
   if (error) {
-    return <div className="anime__page">Whoops something went wrong</div>;
+    return <div className='anime__page'>Whoops something went wrong</div>;
   }
   const { Media } = data;
+  const { edges: characters } = Media.characters;
+  console.log(characters);
+
   return (
     <Layout>
-      <section className="anime__page--header">
+      <section className='anime__page--header'>
         {Object.keys(Media.coverImage).length > 0 && (
           <img
             src={Media.coverImage.large}
-            className="anime__page--header cover"
+            className='anime__page--header cover'
             alt={Media.title.userPreferred}
           />
         )}
 
-        <h2 className="anime__page--header title">
+        <h2 className='anime__page--header title'>
           {Media.title.userPreferred}
         </h2>
       </section>
-      <section className="anime__page--anime">
-        <section className="anime__page--anime--description">
+      <section className='anime__page--anime'>
+        <section className='anime__page--anime--description'>
           <p
-            className="description"
+            className='description'
             dangerouslySetInnerHTML={{ __html: `${Media.description}` }}
           ></p>
         </section>
+        <AnimeProfileChar characters={characters} />
       </section>
     </Layout>
   );
