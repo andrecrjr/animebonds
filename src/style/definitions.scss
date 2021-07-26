@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@490&display=swap");
 
 $black: #000;
 $white: rgb(214, 212, 212);
@@ -10,7 +10,8 @@ $header-height: 26rem;
   font-family: "Ma Shan Zheng", "Arial", sans-serif;
 }
 @mixin title-font-1 {
-  font-family: "Grandstander", cursive;
+  font-family: "Exo", sans-serif;
+
   font-weight: bold;
 }
 

@@ -31,14 +31,14 @@ export default (props) => {
   };
 
   return (
-    <div className="anime__page">
-      <div className="anime__page--container">
+    <div className='anime__page'>
+      <div className='anime__page--container'>
         {typeof history.location.state !== "undefined" ? (
-          <span className="anime__page--close" onClick={goBack}>
+          <span className='anime__page--close' onClick={goBack}>
             ⬅
           </span>
         ) : (
-          <span className="anime__page--close" onClick={closePage}>
+          <span className='anime__page--close' onClick={closePage}>
             X
           </span>
         )}
@@ -46,6 +46,5 @@ export default (props) => {
         {props.children}
       </div>
     </div>
-
   );
 };

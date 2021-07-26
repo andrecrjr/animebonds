@@ -37,7 +37,7 @@ const carouselLogic = {
       setCarousel(Math.abs(carousel - cell.offsetLeft));
     }
     document
-      .querySelector(`.list__wrapper--slide.${title}`)
+      .querySelector(`.list__wrapper--slide${genre}`)
       .setAttribute("style", `transform: translateX(-${carousel}px)`);
   },
 };
