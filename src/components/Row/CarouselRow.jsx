@@ -1,59 +1,65 @@
-import React, { useState, useContext } from "react";
-import { moveNext, moveBefore, titleSection } from "./helpers/carousel";
-import { PageContext } from "../contexts";
+import React, {useState, useContext, useEffect} from "react";
+import {moveNext, moveBefore, titleSection} from "./helpers/carousel";
+import {PageContext} from "../contexts";
 import Cells from "./cell";
 
-export function CarouselRow({ title = "", data = {}, loading }) {
-  const [carousel, setCarousel] = useState(0);
-  const { pageState } = useContext(PageContext);
+export function CarouselRow({title = "", data = {}, loading}) {
+	const [carousel, setCarousel] = useState(0);
+	const {pageState} = useContext(PageContext);
 
-  return (
-    <div className='list__section'>
-      <div className='list__title'>{`${
-        typeof pageState !== "undefined" ? `Searching for ` : ""
-      }${title || pageState.search.textSearch}`}</div>
-      {!loading && (
-        <div
-          className='list__section--next'
-          onClick={(e) =>
-            moveNext(
-              e,
-              title || pageState.search.textSearch,
-              carousel,
-              setCarousel
-            )
-          }
-        ></div>
-      )}
-      {!loading && (
-        <div
-          className='list__section--next after'
-          onClick={(e) =>
-            moveBefore(
-              e,
-              title || pageState.search.textSearch,
-              carousel,
-              setCarousel
-            )
-          }
-        ></div>
-      )}
+	useEffect(() => {
+		if (carousel >= 0) {
+			let genre = `[data-genre=${titleSection(
+				title || pageState.search.textSearch
+			)}]`;
 
-      <div className='list__section--shadow'></div>
+			document
+				.querySelector(`.list__wrapper--slide${genre}`)
+				.setAttribute("style", `transform: translateX(-${carousel}px)`);
+		}
+	}, [carousel, title, pageState]);
 
-      <div
-        className={`list__wrapper`}
-        data-genre={titleSection(title || pageState.search.textSearch)}
-      >
-        <div
-          className={`list__wrapper--slide`}
-          data-load={`${loading ? "loading" : "done"}`}
-          data-genre={titleSection(title || pageState.search.textSearch)}
-        >
-          {loading && <p>Loading...</p>}
-          {data && !loading && <Cells data={data} />}
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className='list__section'>
+			<div className='list__title'>{`${
+				typeof pageState !== "undefined" ? `Searching for ` : ""
+			}${title || pageState.search.textSearch}`}</div>
+			{!loading && (
+				<div
+					className='list__section--next'
+					onClick={(e) =>
+						moveNext(
+							e,
+							title || pageState.search.textSearch,
+							carousel,
+							setCarousel
+						)
+					}
+				></div>
+			)}
+			{!loading && (
+				<div
+					className='list__section--next after'
+					onClick={(e) =>
+						moveBefore(
+							e,
+							title || pageState.search.textSearch,
+							carousel,
+							setCarousel
+						)
+					}
+				></div>
+			)}
+
+			<div className='list__section--shadow'></div>
+			<div
+				className={`list__wrapper--slide`}
+				data-load={`${loading ? "loading" : "done"}`}
+				data-genre={titleSection(title || pageState.search.textSearch)}
+			>
+				{loading && <p>Loading...</p>}
+				{data && !loading && <Cells data={data} />}
+			</div>
+		</div>
+	);
 }

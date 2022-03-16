@@ -1,41 +1,41 @@
 {
-  "name": "animebond",
-  "version": "2.1.0",
-  "description": "A new way to watch Anime!",
-  "keywords": [],
-  "main": "src/index.js",
-  "dependencies": {
-    "@apollo/client": "^3.1.4",
-    "@apollo/react-hooks": "3.1.0",
-    "apollo-client": "^2.6.10",
-    "easygraphql-tester": "5.1.6",
-    "graphql": "14.5.4",
-    "jest": "24.7.1",
-    "node-sass": "^4.14.1",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-palette": "^1.0.1",
-    "react-router-dom": "5.1.2",
-    "react-scripts": "3.0.1",
-    "react-transition-group": "4.3.0"
-  },
-  "devDependencies": {
-    "typescript": "3.3.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "prepare-schema": "npx get-graphql-schema https://graphql.anilist.co > schema.json",
-    "deploy:surge": "yarn build && cd ./build && copy index.html 200.html && surge . animebonds.surge.sh"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "engines": {
-    "node": "14.x"
-  }
+	"name": "animebond",
+	"version": "2.1.0",
+	"description": "A new way to watch Anime!",
+	"keywords": [],
+	"main": "src/index.js",
+	"dependencies": {
+		"@apollo/client": "^3.1.4",
+		"@apollo/react-hooks": "3.1.0",
+		"apollo-client": "^2.6.10",
+		"easygraphql-tester": "5.1.6",
+		"graphql": "14.5.4",
+		"jest": "24.7.1",
+		"node-sass": "^4.14.1",
+		"react": "latest",
+		"react-dom": "latest",
+		"react-palette": "^1.0.1",
+		"react-router-dom": "5.1.2",
+		"react-scripts": "3.0.1",
+		"react-transition-group": "4.3.0"
+	},
+	"devDependencies": {
+		"typescript": "3.3.3"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"eject": "react-scripts eject",
+		"prepare-schema": "npx get-graphql-schema https://graphql.anilist.co > schema.json",
+		"deploy:surge": "yarn build && cd ./build && cp index.html 200.html"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"engines": {
+		"node": "14.x"
+	}
 }
