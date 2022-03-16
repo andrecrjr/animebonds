@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -29,6 +29,6 @@ jobs:
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: "animebonds.surge.sh"
-          project: "./build/"
+          project: "./dist/"
           login: ${{ secrets.surge_login }}
           token: ${{ secrets.surge_token }}
