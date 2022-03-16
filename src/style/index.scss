@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "./definitions.scss";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: $black;
+  color: $white;
+  @include title-font-1;
+}
+
+.list {
+  &__page {
+    @include top-padding-cover(5rem);
+  }
+}
+
+.none {
+  display: none;
+}
+
+@import "./components/list-row.scss";
+@import "./components/header.scss";
+@import "./components/anime-page.scss";
+@import "./components/search-page.scss";

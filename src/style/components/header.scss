@@ -1,0 +1,133 @@
+@import "./includes/header-responsive.scss";
+
+header {
+  &.header {
+    display: flex;
+    height: $header-height;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  &__browser {
+    height: 0;
+  }
+  &.larger--height{
+    height:46rem;
+    .shadows{
+      background: -webkit-linear-gradient(
+        top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.27) 70%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+    .header__anime{
+      padding-bottom:15rem;
+    }
+  }
+}
+
+.shadows {
+  content: "";
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.27) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  &--logo {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    font-size: 1.2rem;
+  }
+
+  &--search {
+    position: absolute;
+    right: 25px;
+    top: 60px;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  &__anime {
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    justify-items: space-between;
+    &--title-area {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    &--title {
+      color: white;
+      text-align: center;
+      justify-self: flex-end;
+      font-size: $header-title-mobile;
+      text-shadow: 0 0 5px black, 0 0 20px black;
+      line-height: $line-heigth-title-mobile;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+    &--image {
+      justify-self: flex-end;
+      width: 80%;
+      padding-right: 5%;
+    }
+    &--more {
+      width: 55%;
+      padding: 12px;
+      align-self: center;
+      border: 0;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0 0 5px black;
+      text-shadow: 0 0 5px black;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}
+
+@media (min-width: 669px) {
+    .header {
+      background-size:100%;
+      background-position: center 30%;
+
+    &__anime {
+      &--image {
+        width: 55%;
+      }
+      &--more {
+        width: 30%;
+      }
+    }
+  }
+  
+}
+
+@media (min-width: 981px) {
+  .header {
+    &__anime {
+      &--image {
+        width: 40%;
+      }
+    }
+  }
+}
