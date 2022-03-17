@@ -7,18 +7,18 @@
     position: fixed;
     width: 100%;
     left: 0;
-    background: black;
+    background: rgb(15, 15, 15);
     z-index: 50;
     top: 0;
     height: 100%;
 
     &--container {
-      padding: 25px 0;
+      padding: 25px 35px;
       height: 100%;
       overflow-x: scroll;
+      position: relative;
     }
     &--close {
-      padding-left: 25px;
       font-size: 2rem;
       cursor: pointer;
       z-index: 20;
@@ -40,23 +40,36 @@
       &--title {
         padding: 25px 25px 0;
         font-size:1rem;
+        margin-bottom:8px;
       }
     }
   &__nav{
     display:flex;
     justify-content:center;
+    margin-bottom:24px;
     a{
+      
       text-decoration: none;
-      &:not(:first-child){
-        padding-left:10px;
+      color: #8d8d8d9e;
+      &:not(:first-child)::before{
+        content:"○";
+        padding:8px;
       }
+     
     }
   }
   &__bio{
-    overflow-y:scroll;
-    max-height:120px;
-    font-size:0.8rem;
-    margin-bottom:22px;
+    &--text{
+      h1{
+        margin-bottom:14px;
+      }
+      .description{
+        overflow-y:scroll;
+        max-height:120px;
+        font-size:0.8rem;
+        margin-bottom:22px;
+      }
+    }
   }
   &__char{
     display:flex;
@@ -78,9 +91,52 @@
       background: black;
       z-index: 10;
       &--container {
-        padding: 115px 0;
+        padding: 90px 25px;
         overflow: hidden;
       }
+       &--close {
+         padding-left:30px;
+       }
     }
+    &__bio{
+      display:flex;
+      &--text{
+      max-width: 45%;
+      max-height:200px;
+      font-size:1rem;
+    }
+  }
+  &__char{
+    margin-left:18px;
+    h1{
+      margin-bottom:20px;
+    }
+    .chars{
+      display:flex;
+      flex-wrap: wrap;
+      overflow:unset;
+      .chars--bio{
+        max-width:100px;
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items: center;
+        &:not(:first-child){
+          margin-left:10px;
+        }
+        &__name{
+          font-size:0.8rem;
+          text-align:center;
+        }
+      }
+      .chars--pic{
+        border-radius:15%;
+        width:50px;
+        &:hover{
+          transform:scale(1.5);
+        }
+      }
+    }
+  }
   }
 }
