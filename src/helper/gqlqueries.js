@@ -47,6 +47,16 @@ export const ANIME_PAGE = gql`
         year
         month
       }
+      streamingEpisodes {
+        title
+        thumbnail
+        url
+        site
+      }
+      nextAiringEpisode {
+        episode,
+        timeUntilAiring
+      }
       characters(role: MAIN) {
         edges {
           id

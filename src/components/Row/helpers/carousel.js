@@ -9,16 +9,16 @@ export const titleSection = (title) => {
 
 export const moveNext = (e, title, carousel, setCarousel) => {
 	e.preventDefault();
-	carouselLogic.control(e, titleSection(title), true, carousel, setCarousel);
+	carouselLogic.control(titleSection(title), true, carousel, setCarousel);
 };
 
 export const moveBefore = (e, title, carousel, setCarousel) => {
 	e.preventDefault();
-	carouselLogic.control(e, titleSection(title), false, carousel, setCarousel);
+	carouselLogic.control(titleSection(title), false, carousel, setCarousel);
 };
 
 const carouselLogic = {
-	control: (e, title, next, carousel, setCarousel) => {
+	control: ( title, next, carousel, setCarousel) => {
 		let genre = `[data-genre=${title}]`;
 		let slideCategory = `.list__wrapper--slide${genre}`;
 		let widthSlide = document.querySelector(slideCategory).clientWidth;

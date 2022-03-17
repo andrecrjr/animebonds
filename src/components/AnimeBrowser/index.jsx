@@ -4,7 +4,6 @@ import Layout from "../Layout";
 import { useLazyQuery } from "@apollo/client";
 import { CarouselRow } from "../Row/CarouselRow";
 import { useLocation } from "react-router-dom";
-
 import { ANIME_SEARCH } from "../../helper";
 
 function AnimeBrowser() {

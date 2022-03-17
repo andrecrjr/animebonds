@@ -17,7 +17,6 @@ function GenreList() {
 			<GenreRow
 				genre={{animeGenre: ["Fantasy"], notGenre: ["Romance", "action"]}}
 			/>
-
 			<GenreRow genre={{animeGenre: ["Ecchi"]}} />
 			<GenreRow genre={{animeGenre: ["Mecha"]}} />
 		</section>
