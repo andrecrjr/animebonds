@@ -2,7 +2,7 @@ import React from "react";
 
 export const AnimeProfileChar = ({ characters }) => {
   return (
-    <section className='anime__page--anime--char'>
+    <section className='anime__char'>
       <h1>Main Characters:</h1>
       <div className='chars'>
         {characters.map((char) => {

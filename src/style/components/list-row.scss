@@ -13,7 +13,7 @@
 		margin: 0 25px;
 		margin-top: 25px;
 		position: relative;
-		overflow: hidden;
+		overflow: auto;
 
 		&--shadow {
 			width: 60px;
@@ -114,6 +114,7 @@
 		}
 		&__section {
 			margin: 20px 20px;
+      overflow: hidden;
 			&:first-child {
 				margin-top: 30px;
 			}

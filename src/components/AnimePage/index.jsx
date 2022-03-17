@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { ANIME_PAGE } from "../../helper";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Layout from "../Layout";
 import {Outlet} from 'react-router-dom'
 
@@ -24,19 +24,23 @@ function AnimePage(props) {
 
   return (
     <Layout>
-      <section className='anime__page--header'>
+      <section className='anime__header'>
         {Object.keys(Media.coverImage).length > 0 && (
           <img
             src={Media.coverImage.large}
-            className='anime__page--header cover'
+            className='anime__header--cover'
             alt={Media.title.userPreferred}
           />
         )}
 
-        <h2 className='anime__page--header title'>
+        <h2 className='anime__header--title'>
           {Media.title.userPreferred}
         </h2>
       </section>
+      <nav className="anime__nav">
+        <NavLink to="episodes" >Episodes</NavLink>
+        <NavLink to="bio">Bio</NavLink>
+      </nav>
       <Outlet context={{Media, characters}} />
     </Layout>
   );

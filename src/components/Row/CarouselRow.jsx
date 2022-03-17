@@ -20,7 +20,7 @@ export function CarouselRow({title = "", data = {}, loading}) {
 	}, [carousel, title, pageState]);
 
 	return (
-		<div className='list__section'>
+    <div className='list__section'>
 			<div className='list__title'>{`${
 				typeof pageState !== "undefined" ? `Searching for ` : ""
 			}${title || pageState.search.textSearch}`}</div>
@@ -51,7 +51,8 @@ export function CarouselRow({title = "", data = {}, loading}) {
 				></div>
 			)}
 
-			<div className='list__section--shadow'></div>
+      <div className='list__section--shadow'></div>
+      <div className="list__wrapper">
 			<div
 				className={`list__wrapper--slide`}
 				data-load={`${loading ? "loading" : "done"}`}
@@ -59,7 +60,8 @@ export function CarouselRow({title = "", data = {}, loading}) {
 			>
 				{loading && <p>Loading...</p>}
 				{data && !loading && <Cells data={data} />}
-			</div>
+        </div>
+      </div>
 		</div>
 	);
 }
