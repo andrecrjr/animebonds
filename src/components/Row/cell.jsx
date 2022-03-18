@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { AnimeContext, PageContext } from "../contexts/";
 import { useNavigate } from "react-router-dom";
 
-function Cells({ data }) {
+
+export const Cells = ({ data }) => {
   return (
     <>
       {data.media.map((item) => (
@@ -14,6 +15,21 @@ function Cells({ data }) {
       ))}
     </>
   );
+}
+
+export const AnimeEpisodeCell = ({ data }) => {
+  
+  return ( <>{data.map(item => {
+    return (
+      <section className="list__episode">
+            <a href={ `${item.url}` } target="_blank">
+              <img src={ `${item.thumbnail}` } alt="" width="150" />
+            </a>
+            <div class="list__episode--title">
+              {item.title}
+            </div>
+      </section>)
+    }) }</>)
 }
 
 function AnimeCell({ item, index }) {
@@ -31,7 +47,6 @@ function AnimeCell({ item, index }) {
           });
         } else {
           dispatchAnime({ type: "SELECT_ANIME", payload: item });
-          
           navigate("/");
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
@@ -46,4 +61,4 @@ function AnimeCell({ item, index }) {
   );
 }
 
-export default Cells;
+

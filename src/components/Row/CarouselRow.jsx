@@ -1,9 +1,9 @@
 import React, {useState, useContext, useEffect} from "react";
 import {moveNext, moveBefore, titleSection} from "./helpers/carousel";
 import {PageContext} from "../contexts";
-import Cells from "./cell";
+import {Cells, AnimeEpisodeCell} from "./cell";
 
-export function CarouselRow({title = "", data = {}, loading}) {
+export function CarouselRow({title = "", data = {}, loading, episodes=false}) {
 	const [carousel, setCarousel] = useState(0);
 	const {pageState} = useContext(PageContext);
 
@@ -22,7 +22,7 @@ export function CarouselRow({title = "", data = {}, loading}) {
 	return (
     <div className='list__section'>
 			<div className='list__title'>{`${
-				typeof pageState !== "undefined" ? `Searching for ` : ""
+				typeof pageState !== "undefined" && !episodes ? `Searching for ` : ""
 			}${title || pageState.search.textSearch}`}</div>
 			{!loading && (
 				<div
@@ -59,7 +59,8 @@ export function CarouselRow({title = "", data = {}, loading}) {
 				data-genre={titleSection(title || pageState.search.textSearch)}
 			>
 				{loading && <p>Loading...</p>}
-				{data && !loading && <Cells data={data} />}
+          {data && !loading && !episodes && <Cells data={data} />}
+          {data && !loading && episodes && <AnimeEpisodeCell data={data} />}
         </div>
       </div>
 		</div>

@@ -29,6 +29,19 @@ export const ANIME_CATEGORIES = gql`
   }
 `;
 
+export const ANIME_EPISODES_PAGE = gql`
+query getAnimeData($animeId: Int) {
+Media(id: $animeId) {
+      streamingEpisodes {
+        title
+        thumbnail
+        url
+        site
+      }
+  }
+}
+`
+
 export const ANIME_PAGE = gql`
   query getAnimeData($animeId: Int) {
     Media(id: $animeId) {
@@ -46,12 +59,6 @@ export const ANIME_PAGE = gql`
       startDate {
         year
         month
-      }
-      streamingEpisodes {
-        title
-        thumbnail
-        url
-        site
       }
       nextAiringEpisode {
         episode,

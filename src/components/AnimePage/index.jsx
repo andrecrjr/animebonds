@@ -6,10 +6,10 @@ import Layout from "../Layout";
 import {Outlet} from 'react-router-dom'
 
 function AnimePage(props) {
-  const location = useParams();
+  const { id } = useParams();
 
   const { loading, data, error } = useQuery(ANIME_PAGE, {
-    variables: { animeId: location.id || 0 },
+    variables: { animeId: id || 0 },
   });
 
   if (loading) {
@@ -41,7 +41,7 @@ function AnimePage(props) {
         <NavLink to="episodes" >Episodes</NavLink>
         <NavLink to="bio">Bio</NavLink>
       </nav>
-      <Outlet context={{Media, characters}} />
+      <Outlet context={{Media, characters, id }} />
     </Layout>
   );
 }
