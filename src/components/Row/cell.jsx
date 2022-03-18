@@ -17,20 +17,6 @@ export const Cells = ({ data }) => {
   );
 }
 
-export const AnimeEpisodeCell = ({ data }) => {
-  
-  return ( <>{data.map(item => {
-    return (
-      <section className="list__episode">
-            <a href={ `${item.url}` } target="_blank">
-              <img src={ `${item.thumbnail}` } alt="" width="150" />
-            </a>
-            <div class="list__episode--title">
-              {item.title}
-            </div>
-      </section>)
-    }) }</>)
-}
 
 function AnimeCell({ item, index }) {
   const { dispatchAnime } = useContext(AnimeContext);

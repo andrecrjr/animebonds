@@ -1,0 +1,13 @@
+.anime{
+  &__episodes{
+    max-height:400px;
+    overflow-y:scroll;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    .list__episode{
+      display:flex;
+    }
+  }
+}

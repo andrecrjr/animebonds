@@ -1,7 +1,7 @@
 import React, {useState, useContext, useEffect} from "react";
 import {moveNext, moveBefore, titleSection} from "./helpers/carousel";
 import {PageContext} from "../contexts";
-import {Cells, AnimeEpisodeCell} from "./cell";
+import {Cells} from "./cell";
 
 export function CarouselRow({title = "", data = {}, loading, episodes=false}) {
 	const [carousel, setCarousel] = useState(0);
@@ -60,7 +60,6 @@ export function CarouselRow({title = "", data = {}, loading, episodes=false}) {
 			>
 				{loading && <p>Loading...</p>}
           {data && !loading && !episodes && <Cells data={data} />}
-          {data && !loading && episodes && <AnimeEpisodeCell data={data} />}
         </div>
       </div>
 		</div>
