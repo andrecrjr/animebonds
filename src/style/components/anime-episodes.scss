@@ -1,13 +1,44 @@
-.anime{
-  &__episodes{
-    max-height:400px;
-    overflow-y:scroll;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    .list__episode{
-      display:flex;
-    }
-  }
+.anime {
+	&__episodes {
+		max-height: 400px;
+		display: grid;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+		grid-template-columns: 100%;
+		.episode {
+			text-decoration: none;
+			color: white;
+			transition: opacity ease-in 200ms;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		.list__episode {
+			display: grid;
+			margin-top: 22px;
+			grid-template-columns: 1fr auto;
+			column-gap: 18px;
+			&--title {
+				word-wrap: break-word;
+				font-size: 0.7rem;
+				overflow: auto;
+			}
+		}
+	}
+}
+
+@media (min-width: 681px) {
+	.anime {
+		&__episodes {
+			max-width: 85%;
+			overflow-y: scroll;
+			.list__episode {
+				grid-template-columns: auto 1fr;
+				&--title {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
 }

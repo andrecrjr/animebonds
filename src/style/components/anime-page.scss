@@ -1,145 +1,145 @@
 @use "./anime-episodes";
 
 .open--anime-page {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .anime {
-  &__page {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    background: rgb(15, 15, 15);
-    z-index: 50;
-    top: 0;
-    height: 100%;
+	&__page {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		background: rgb(15, 15, 15);
+		z-index: 50;
+		top: 0;
+		height: 100%;
 
-    &--container {
-      padding: 25px 35px;
-      height: 100%;
-      overflow-x: scroll;
-      position: relative;
-    }
-    &--close {
-      font-size: 2rem;
-      cursor: pointer;
-      z-index: 20;
-      position: relative;
-    }
-    &--anime {
-      padding: 20px 32px;
-    }
-  }
-  &__header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 5;
-      &--cover {
-        width: 6.5rem;
-      }
-      &--title {
-        padding: 25px 25px 0;
-        font-size:1rem;
-        margin-bottom:8px;
-      }
-    }
-  &__nav{
-    display:flex;
-    justify-content:center;
-    margin-bottom:24px;
-    a{
-      
-      text-decoration: none;
-      color: #8d8d8d9e;
-      &:not(:first-child)::before{
-        content:"○";
-        padding:8px;
-      }
-     
-    }
-  }
-  &__bio{
-    &--text{
-      h1{
-        margin-bottom:14px;
-      }
-      .description{
-        overflow-y:scroll;
-        max-height:120px;
-        font-size:0.8rem;
-        margin-bottom:22px;
-      }
-    }
-  }
-  &__char{
-    display:flex;
-    flex-direction: column;
-    .chars{
-      display:flex;
-      overflow-x:scroll;
-      .chars--bio{
-        margin-left:10px;
-      }
-    }
-  }
+		&--container {
+			padding: 25px 35px;
+			height: 100%;
+			overflow-x: scroll;
+			position: relative;
+		}
+		&--close {
+			font-size: 2rem;
+			cursor: pointer;
+			z-index: 20;
+			position: relative;
+		}
+		&--anime {
+			padding: 20px 32px;
+		}
+	}
+	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 5;
+		&--cover {
+			width: 6.5rem;
+		}
+		&--title {
+			padding: 25px 25px 0;
+			font-size: 1rem;
+			margin-bottom: 8px;
+		}
+	}
+	&__nav {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 24px;
+		a {
+			text-decoration: none;
+			color: #8d8d8d9e;
+			&:not(:first-child)::before {
+				content: "○";
+				padding: 8px;
+			}
+		}
+	}
+	&__bio {
+		&--text {
+			h1 {
+				margin-bottom: 14px;
+			}
+			.description {
+				overflow-y: scroll;
+				max-height: 120px;
+				font-size: 0.8rem;
+				margin-bottom: 22px;
+			}
+		}
+	}
+	&__char {
+		display: flex;
+		flex-direction: column;
+		h1 {
+			margin-bottom: 10px;
+		}
+		.chars {
+			display: flex;
+			overflow-x: scroll;
+			.chars--bio {
+				margin-left: 10px;
+			}
+		}
+	}
 }
 
-
 @media (min-width: 661px) {
-  .anime {
-    &__page {
-      position: static;
-      background: black;
-      z-index: 10;
-      &--container {
-        padding: 90px 25px;
-        overflow: hidden;
-      }
-       &--close {
-         padding-left:30px;
-       }
-    }
-    &__bio{
-      display:flex;
-      &--text{
-      max-width: 45%;
-      max-height:200px;
-      font-size:1rem;
-    }
-  }
-  &__char{
-    margin-left:18px;
-    h1{
-      margin-bottom:20px;
-    }
-    .chars{
-      display:flex;
-      flex-wrap: wrap;
-      overflow:unset;
-      .chars--bio{
-        max-width:100px;
-        display:flex;
-        justify-content:center;
-        flex-direction:column;
-        align-items: center;
-        &:not(:first-child){
-          margin-left:10px;
-        }
-        &__name{
-          font-size:0.8rem;
-          text-align:center;
-        }
-      }
-      .chars--pic{
-        border-radius:15%;
-        width:50px;
-        &:hover{
-          transform:scale(1.5);
-        }
-      }
-    }
-  }
-  }
+	.anime {
+		&__page {
+			position: static;
+			background: black;
+			z-index: 10;
+			&--container {
+				padding: 90px 25px;
+				overflow: hidden;
+			}
+			&--close {
+				padding-left: 30px;
+			}
+		}
+		&__bio {
+			display: flex;
+			&--text {
+				max-width: 45%;
+				max-height: 200px;
+				font-size: 1rem;
+			}
+		}
+		&__char {
+			margin-left: 18px;
+			h1 {
+				margin-bottom: 20px;
+			}
+			.chars {
+				display: flex;
+				flex-wrap: wrap;
+				overflow: unset;
+				.chars--bio {
+					max-width: 100px;
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					align-items: center;
+					&:not(:first-child) {
+						margin-left: 10px;
+					}
+					&__name {
+						font-size: 0.8rem;
+						text-align: center;
+					}
+				}
+				.chars--pic {
+					border-radius: 15%;
+					width: 50px;
+					&:hover {
+						transform: scale(1.5);
+					}
+				}
+			}
+		}
+	}
 }
