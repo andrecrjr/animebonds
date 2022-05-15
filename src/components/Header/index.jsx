@@ -9,7 +9,7 @@ export function Header() {
 	const findAnime = (e) => {
 		e.preventDefault();
 		if (state.selected.cont > 0) {
-			window.scroll(0, 300);
+			window.scroll(0, 100);
 		}
 		if (document.querySelector("header").classList.contains("larger--height")) {
 			document
@@ -73,7 +73,7 @@ const HeaderAnime = ({anime}) => {
 	const redirectPage = (e, animeId) => {
 		e.preventDefault();
 		navigate(`/anime/${animeId}/overview`);
-		window.scroll(0, 500);
+		window.scroll(0, 300);
 		desktopOpen();
 	};
 	if (anime)
