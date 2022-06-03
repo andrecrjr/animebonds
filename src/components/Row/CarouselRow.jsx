@@ -6,6 +6,7 @@ import {Cells} from "./cell";
 export function CarouselRow({title = "", data = {}, loading, episodes=false}) {
 	const [carousel, setCarousel] = useState(0);
 	const {pageState} = useContext(PageContext);
+	console.log(pageState)
 
 	useEffect(() => {
 		if (carousel >= 0) {

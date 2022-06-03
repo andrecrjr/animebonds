@@ -1,0 +1,984 @@
+{"data": {
+    "Page": {
+      "media": [
+        {
+          "title": {
+            "english": "Log Horizon",
+            "userPreferred": "Log Horizon"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx17265-95SA9keO8Jtv.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx17265-95SA9keO8Jtv.jpg",
+            "color": "#50aee4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/17265-53eBCC34SKyM.jpg",
+          "id": 17265
+        },
+        {
+          "title": {
+            "english": "Kenichi: The Mightiest Disciple",
+            "userPreferred": "Shijou Saikyou no Deshi Kenichi"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Comedy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1559-7ZlyZxtBNo8g.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1559-7ZlyZxtBNo8g.jpg",
+            "color": "#e4a15d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1559-5SRwJ2TlstL3.jpg",
+          "id": 1559
+        },
+        {
+          "title": {
+            "english": "Ushio and Tora 2 (TV)",
+            "userPreferred": "Ushio to Tora 2 (TV)"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21241-Avzz7tcb0yTy.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx21241-Avzz7tcb0yTy.jpg",
+            "color": "#e4ae35"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21241-I0Qk27jIK3UB.png",
+          "id": 21241
+        },
+        {
+          "title": {
+            "english": "Dragon Ball",
+            "userPreferred": "Dragon Ball"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx223-Ld6vrSnd081L.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx223-Ld6vrSnd081L.png",
+            "color": "#e49350"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/223-vyRuUBBYfcUb.jpg",
+          "id": 223
+        },
+        {
+          "title": {
+            "english": "Heartcatch Precure!",
+            "userPreferred": "Heartcatch Precure!"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama",
+            "Fantasy",
+            "Mahou Shoujo"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx7645-YRvajw8WUsfJ.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx7645-YRvajw8WUsfJ.png",
+            "color": "#D61AA7"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/7645-VzqxaDZ6D3vz.jpg",
+          "id": 7645
+        },
+        {
+          "title": {
+            "english": "Magi: Adventure of Sinbad",
+            "userPreferred": "Magi: Sinbad no Bouken"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21394-yauvzIHGAoZv.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21394-yauvzIHGAoZv.jpg",
+            "color": "#43a1e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21394-wQkxIEAup8aT.jpg",
+          "id": 21394
+        },
+        {
+          "title": {
+            "english": "Lupin the 3rd Part IV",
+            "userPreferred": "Lupin III: Part IV"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20906-6hK5SuAB4MmV.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20906-6hK5SuAB4MmV.png",
+            "color": "#5da1e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20906-EWiCqF6vySRT.jpg",
+          "id": 20906
+        },
+        {
+          "title": {
+            "english": "Overlord III",
+            "userPreferred": "Overlord III"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101474-tGRyvSAWMjU9.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx101474-tGRyvSAWMjU9.jpg",
+            "color": "#5daef1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101474-n35NKyt9APDw.jpg",
+          "id": 101474
+        },
+        {
+          "title": {
+            "english": "JoJo's Bizarre Adventure (TV)",
+            "userPreferred": "JoJo no Kimyou na Bouken (TV)"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14719-XFOPewvDtDdA.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx14719-XFOPewvDtDdA.jpg",
+            "color": "#e4a15d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/14719-m7Hv2AxcNNjM.jpg",
+          "id": 14719
+        },
+        {
+          "title": {
+            "english": "Blood Blockade Battlefront & Beyond",
+            "userPreferred": "Kekkai Sensen & BEYOND"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx97886-iArtYIxZzGcR.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx97886-iArtYIxZzGcR.jpg",
+            "color": "#35a1ae"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97886-DCKS0JQRwuJy.jpg",
+          "id": 97886
+        },
+        {
+          "title": {
+            "english": "Thunderbolt Fantasy Sword Seekers 3",
+            "userPreferred": "Thunderbolt Fantasy: Touriken Yuuki 3"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Drama",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx119806-fM8V7oRgmSmh.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx119806-fM8V7oRgmSmh.jpg",
+            "color": "#e4a1bb"
+          },
+          "bannerImage": null,
+          "id": 119806
+        },
+        {
+          "title": {
+            "english": "Angel Beats!",
+            "userPreferred": "Angel Beats!"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6547-3jWzWyXg34Et.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx6547-3jWzWyXg34Et.png",
+            "color": "#5d78f1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6547-YUUiSjKyxxeQ.jpg",
+          "id": 6547
+        },
+        {
+          "title": {
+            "english": "Saga of Tanya the Evil",
+            "userPreferred": "Youjo Senki"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21613-uh46F6TNGbNf.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21613-uh46F6TNGbNf.png",
+            "color": null
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21613-FGAqKSTvfxuA.png",
+          "id": 21613
+        },
+        {
+          "title": {
+            "english": "Full Metal Panic? Fumoffu",
+            "userPreferred": "Full Metal Panic? Fumoffu"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Romance"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx72-dalTPVFKaOuZ.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx72-dalTPVFKaOuZ.png",
+            "color": "#e4d65d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/72-bmvzb8rQunld.png",
+          "id": 72
+        },
+        {
+          "title": {
+            "english": "Sailor Moon S",
+            "userPreferred": "Bishoujo Senshi Sailor Moon S"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Fantasy",
+            "Mahou Shoujo",
+            "Romance"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx532-R0ntF8tWnVUu.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx532-R0ntF8tWnVUu.jpg",
+            "color": "#e4bb35"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/532-EUIf0FtAE9Zl.jpg",
+          "id": 532
+        },
+        {
+          "title": {
+            "english": "Bungo Stray Dogs",
+            "userPreferred": "Bungou Stray Dogs"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Mystery",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21311-hAXyT8Yoh6G9.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx21311-hAXyT8Yoh6G9.jpg",
+            "color": "#e4bb50"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21311-oVJYXoU38Lm5.jpg",
+          "id": 21311
+        },
+        {
+          "title": {
+            "english": "Fate/Grand Order Absolute Demonic Front: Babylonia",
+            "userPreferred": "Fate/Grand Order: Zettai Majuu Sensen Babylonia"
+          },
+          "averageScore": 77,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx103275-SN0wwshS3tWA.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx103275-SN0wwshS3tWA.jpg",
+            "color": "#5d78e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/103275-9vSzr7YzbXQb.jpg",
+          "id": 103275
+        },
+        {
+          "title": {
+            "english": "Magical Girl Lyrical Nanoha A's",
+            "userPreferred": "Mahou Shoujo Lyrical Nanoha A's"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama",
+            "Fantasy",
+            "Mahou Shoujo"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx77-SwBCj7R1enWi.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx77-SwBCj7R1enWi.png",
+            "color": "#e450c9"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/77-T4VUflM5o47a.jpg",
+          "id": 77
+        },
+        {
+          "title": {
+            "english": "Princess Connect! Re:Dive Season 2",
+            "userPreferred": "Princess Connect! Re:Dive Season 2"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx122808-TUKyfYWKmOX3.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx122808-TUKyfYWKmOX3.jpg",
+            "color": "#5d86e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/122808-1y799jBMv1VH.jpg",
+          "id": 122808
+        },
+        {
+          "title": {
+            "english": "My Hero Academia",
+            "userPreferred": "Boku no Hero Academia"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21459-oZMZ7JwS5Sxq.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx21459-oZMZ7JwS5Sxq.jpg",
+            "color": "#e4c935"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21459-yeVkolGKdGUV.jpg",
+          "id": 21459
+        },
+        {
+          "title": {
+            "english": "Black Clover",
+            "userPreferred": "Black Clover"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx97940-bPydLjny8PUw.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx97940-bPydLjny8PUw.png",
+            "color": "#6b6b1a"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97940-1URQdQ4U1a0b.jpg",
+          "id": 97940
+        },
+        {
+          "title": {
+            "english": "The Rising of the Shield Hero",
+            "userPreferred": "Tate no Yuusha no Nariagari"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx99263-SJSk5d6mhQZO.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx99263-SJSk5d6mhQZO.jpg",
+            "color": "#5dc9e4"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99263-IwkmdCTsDY1t.jpg",
+          "id": 99263
+        },
+        {
+          "title": {
+            "english": "Magi: The Labyrinth of Magic",
+            "userPreferred": "Magi: The labyrinth of magic"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx14513-b4C3J03GF6UT.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx14513-b4C3J03GF6UT.jpg",
+            "color": "#e46b35"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/14513-DDBxCumOyPIa.jpg",
+          "id": 14513
+        },
+        {
+          "title": {
+            "english": "Noragami",
+            "userPreferred": "Noragami"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20447-EoQXeygHaVCK.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20447-EoQXeygHaVCK.jpg",
+            "color": "#bbe4f1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20447-nlgQQzcgWbgw.jpg",
+          "id": 20447
+        },
+        {
+          "title": {
+            "english": "Black Lagoon",
+            "userPreferred": "BLACK LAGOON"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Thriller"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx889-Wf4GZRnHv6Dp.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx889-Wf4GZRnHv6Dp.png",
+            "color": "#f1bb93"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/889-qZE1iFHexJVz.jpg",
+          "id": 889
+        },
+        {
+          "title": {
+            "english": "Durarara!! X2 The Second Arc",
+            "userPreferred": "Durarara!!x2 Ten"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Mystery",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20879-IqgXMXuUMvRM.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20879-IqgXMXuUMvRM.png",
+            "color": null
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20879-KRnO8kddef9Q.jpg",
+          "id": 20879
+        },
+        {
+          "title": {
+            "english": "Durarara!! X2",
+            "userPreferred": "Durarara!!x2 Shou"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Mystery",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20652-8ft6GZKEoeWn.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20652-8ft6GZKEoeWn.png",
+            "color": null
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20652-sCk2BUWiRMLc.jpg",
+          "id": 20652
+        },
+        {
+          "title": {
+            "english": "Toilet-bound Hanako-kun",
+            "userPreferred": "Jibaku Shounen Hanako-kun"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama",
+            "Mystery",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx108463-knWkFUR311ho.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx108463-knWkFUR311ho.jpg",
+            "color": "#f19335"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/108463-pJ5XS6oJwvKh.jpg",
+          "id": 108463
+        },
+        {
+          "title": {
+            "english": null,
+            "userPreferred": "Initial D Fifth Stage"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Drama",
+            "Sports"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/15059.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/15059.jpg",
+            "color": "#e4280d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n15059-xvUhYlh52ucH.jpg",
+          "id": 15059
+        },
+        {
+          "title": {
+            "english": "Fullmetal Alchemist",
+            "userPreferred": "Hagane no Renkinjutsushi"
+          },
+          "averageScore": 78,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx121-JUlbsyhTUNkk.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx121-JUlbsyhTUNkk.png",
+            "color": "#e4bb43"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/121-t5K7c8WRuPWl.jpg",
+          "id": 121
+        },
+        {
+          "title": {
+            "english": "Dragon Ball Z",
+            "userPreferred": "Dragon Ball Z"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx813-QBIvCQgHcjcF.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx813-QBIvCQgHcjcF.png",
+            "color": "#f1a150"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/813-03ZLvWJgR6Wd.jpg",
+          "id": 813
+        },
+        {
+          "title": {
+            "english": "Thunderbolt Fantasy Sword Seekers 2",
+            "userPreferred": "Thunderbolt Fantasy: Touriken Yuuki 2"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Drama",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99557-AiXG7q4CsRFG.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx99557-AiXG7q4CsRFG.jpg",
+            "color": null
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99557-1QB7AwuAZxoh.jpg",
+          "id": 99557
+        },
+        {
+          "title": {
+            "english": "Kill la Kill",
+            "userPreferred": "Kill la Kill"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Ecchi"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx18679-zE07Y4SFaOiO.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx18679-zE07Y4SFaOiO.png",
+            "color": "#e40d0d"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/18679-rpC99hxBxaMn.jpg",
+          "id": 18679
+        },
+        {
+          "title": {
+            "english": "Rurouni Kenshin",
+            "userPreferred": "Rurouni Kenshin: Meiji Kenkaku Romantan"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Drama",
+            "Romance"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx45-DEFgZRCxiGmF.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx45-DEFgZRCxiGmF.png",
+            "color": "#f16b50"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/45-JVUpMKU0HzRW.jpg",
+          "id": 45
+        },
+        {
+          "title": {
+            "english": "Moribito: Guardian of the Spirit",
+            "userPreferred": "Seirei no Moribito"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1827-snIp62SY7ZFK.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1827-snIp62SY7ZFK.jpg",
+            "color": "#00866b"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1827-cPDeZs4N6VH6.jpg",
+          "id": 1827
+        },
+        {
+          "title": {
+            "english": "JoJo's Bizarre Adventure: Stardust Crusaders",
+            "userPreferred": "JoJo no Kimyou na Bouken: Stardust Crusaders"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20474-0VwWX4bKJkb1.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20474-0VwWX4bKJkb1.jpg",
+            "color": null
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20474-peBLuUVAzNC3.jpg",
+          "id": 20474
+        },
+        {
+          "title": {
+            "english": "Yona of the Dawn",
+            "userPreferred": "Akatsuki no Yona"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Drama",
+            "Fantasy",
+            "Romance"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20770-brCDvhTXlums.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20770-brCDvhTXlums.png",
+            "color": "#f1bb50"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20770-tZZMsglzAUAe.jpg",
+          "id": 20770
+        },
+        {
+          "title": {
+            "english": "Durarara!!",
+            "userPreferred": "Durarara!!"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Mystery",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6746-Q4EmstN2fy0R.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx6746-Q4EmstN2fy0R.png",
+            "color": "#f1e4bb"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6746-84oNA7P9pboV.jpg",
+          "id": 6746
+        },
+        {
+          "title": {
+            "english": "Initial D 4th Stage",
+            "userPreferred": "Initial D FOURTH STAGE"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Drama",
+            "Sports"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b18-r7IirVmwP89u.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b18-r7IirVmwP89u.jpg",
+            "color": "#e46b50"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/18-aiibhi4BrZeR.jpg",
+          "id": 18
+        },
+        {
+          "title": {
+            "english": "Durarara!! X2 The Third Arc",
+            "userPreferred": "Durarara!!x2 Ketsu"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Mystery",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20880-WsvmgSdL8lhP.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20880-WsvmgSdL8lhP.png",
+            "color": "#e4c943"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20880-iQx5G0gz5n6G.jpg",
+          "id": 20880
+        },
+        {
+          "title": {
+            "english": "Naruto",
+            "userPreferred": "NARUTO"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Comedy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20-YJvLbgJQPCoI.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20-YJvLbgJQPCoI.jpg",
+            "color": "#e47850"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20-HHxhPj5JD13a.jpg",
+          "id": 20
+        },
+        {
+          "title": {
+            "english": "Lupin the 3rd Part V",
+            "userPreferred": "Lupin III: Part V"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx100957-YzfrlJDqswJc.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx100957-YzfrlJDqswJc.jpg",
+            "color": "#e48635"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100957-YCn32nSXzauM.jpg",
+          "id": 100957
+        },
+        {
+          "title": {
+            "english": "Dorohedoro",
+            "userPreferred": "Dorohedoro"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Horror",
+            "Mystery"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx105228-9KSgNMIX3kPa.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx105228-9KSgNMIX3kPa.jpg",
+            "color": "#783528"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105228-QBAya2q8SP52.jpg",
+          "id": 105228
+        },
+        {
+          "title": {
+            "english": "Thunderbolt Fantasy: Sword Travels in the East",
+            "userPreferred": "Thunderbolt Fantasy: Touriken Yuuki"
+          },
+          "averageScore": 79,
+          "genres": [
+            "Action",
+            "Drama",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx98143-PW8iwqFlNS4M.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx98143-PW8iwqFlNS4M.jpg",
+            "color": "#e4c9a1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98143-y2uFgp97DeHK.jpg",
+          "id": 98143
+        },
+        {
+          "title": {
+            "english": "Assassination Classroom",
+            "userPreferred": "Ansatsu Kyoushitsu"
+          },
+          "averageScore": 80,
+          "genres": [
+            "Action",
+            "Comedy",
+            "Drama",
+            "Supernatural"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20755-q0b3Ok1cAbPd.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20755-q0b3Ok1cAbPd.jpg",
+            "color": "#e4d650"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20755-D4ipww9U8YkC.jpg",
+          "id": 20755
+        },
+        {
+          "title": {
+            "english": "Initial D 2nd Stage",
+            "userPreferred": "Initial D SECOND STAGE"
+          },
+          "averageScore": 80,
+          "genres": [
+            "Action",
+            "Drama",
+            "Sports"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b186-xlQSLsOJbrx4.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/b186-xlQSLsOJbrx4.jpg",
+            "color": "#f1c943"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n186-R2K9rwXRPhi9.jpg",
+          "id": 186
+        },
+        {
+          "title": {
+            "english": "Black Lagoon: The Second Barrage",
+            "userPreferred": "BLACK LAGOON: The Second Barrage"
+          },
+          "averageScore": 80,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Drama",
+            "Thriller"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1519-cScqJxQW3LNL.png",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1519-cScqJxQW3LNL.png",
+            "color": "#e4c9a1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1519-vKeFZRQNC3HB.jpg",
+          "id": 1519
+        },
+        {
+          "title": {
+            "english": null,
+            "userPreferred": "Ashita no Joe"
+          },
+          "averageScore": 80,
+          "genres": [
+            "Action",
+            "Drama",
+            "Slice of Life",
+            "Sports"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx2402-hbo1SbfcM5hm.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx2402-hbo1SbfcM5hm.jpg",
+            "color": "#e46b43"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2402-SgRt5yp35i1Y.jpg",
+          "id": 2402
+        },
+        {
+          "title": {
+            "english": "That Time I Got Reincarnated as a Slime",
+            "userPreferred": "Tensei Shitara Slime Datta Ken"
+          },
+          "averageScore": 80,
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101280-ezBXqEHi8pg0.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx101280-ezBXqEHi8pg0.jpg",
+            "color": "#5daef1"
+          },
+          "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101280-9t7J3774n955.jpg",
+          "id": 101280
+        },
+        {
+          "title": {
+            "english": "Kingdom Season 2",
+            "userPreferred": "Kingdom 2"
+          },
+          "averageScore": 80,
+          "genres": [
+            "Action"
+          ],
+          "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx17389-jf3N776Tv7P5.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx17389-jf3N776Tv7P5.jpg",
+            "color": "#e4c9ae"
+          },
+          "bannerImage": null,
+          "id": 17389
+        }
+      ]
+    }
+  }
+}

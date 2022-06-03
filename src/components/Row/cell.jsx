@@ -18,7 +18,7 @@ export const Cells = ({ data }) => {
 }
 
 
-function AnimeCell({ item, index }) {
+export function AnimeCell({ item, index }) {
   const { dispatchAnime } = useContext(AnimeContext);
   const { pageState } = useContext(PageContext)
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ function AnimeCell({ item, index }) {
       <img
         src={item.coverImage.large}
         className={`list__cell--item ${index}`}
-        alt={index}
+        alt={item.title.english}
       />
     </section>
   );
