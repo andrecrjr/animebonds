@@ -1,10 +1,10 @@
 import {render, } from '@testing-library/react'
-import { renderHook } from '@testing-library/react-hooks';
 import { useReducer } from 'react';
-import { Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import {AnimeContext, PageContext} from "../components/contexts";
 import graphqlData from "./__mocks__/mock_graphql.json"
 import dragonballPage from './__mocks__/mock_animepage.json'
+import jojoMock from './__mocks__/mock_jojoanimepage.json'
 import { ANIME_CATEGORIES, ANIME_PAGE } from '../helper';
 import { MockedProvider } from '@apollo/client/testing';
 import { initialState as animeState, PageReducer } from '../components/reducers/searchReducer';
@@ -26,17 +26,25 @@ const mocks = [
         request: {
           query: ANIME_PAGE,
           variables: {
-             animeId: 223
+             animeId: "223"
           },
         },
         result: dragonballPage,
+        },{
+        request: {
+            query: ANIME_PAGE,
+            variables: {
+                animeId: "20474"
+            },
+        },
+        result: jojoMock,
         },
   ];
 
-
+  
 function AllTheProviders({children}) {
-    global.scrollTo = jest.fn()
     global.scroll = jest.fn()
+    global.scrollTo = jest.fn()
     const history = createMemoryHistory();
     const [state,] = useReducer(AnimeReducer, animeState)
     
@@ -44,13 +52,13 @@ function AllTheProviders({children}) {
     
     return(
         <MockedProvider mocks={mocks} addTypename={false}>
-                <Router location={history.location} navigator={history}>
+                <BrowserRouter history={history} >
                     <PageContext.Provider value={{pageState, dispatchPageState}}>
                         <AnimeContext.Provider value={{state}}>
                             {children}
                         </AnimeContext.Provider>
                     </PageContext.Provider>
-                </Router>
+                </BrowserRouter>
             </MockedProvider>
     )
 }

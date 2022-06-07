@@ -1,4 +1,4 @@
-{
+{"data":{
     "Media": {
         "title": {
             "english": "Dragon Ball",
@@ -122,4 +122,5 @@
         },
         "__typename": "Media"
     }
+}
 }

@@ -7,7 +7,7 @@ export const AnimeProfileChar = ({ characters }) => {
       <div className='chars'>
         {characters.map((char) => {
           return (
-            <div class='chars--bio'>
+            <div className='chars--bio' key={char.node.image.medium}>
               <img
                 src={char.node.image.medium}
                 alt={char.node.name.full}

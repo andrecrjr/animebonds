@@ -1,0 +1,110 @@
+{"data":{
+    "Media": {
+        "title": {
+            "english": "JoJo's Bizarre Adventure: Stardust Crusaders",
+            "userPreferred": "JoJo no Kimyou na Bouken: Stardust Crusaders",
+            "__typename": "MediaTitle"
+        },
+        "coverImage": {
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20474-0VwWX4bKJkb1.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20474-0VwWX4bKJkb1.jpg",
+            "color": null,
+            "__typename": "MediaCoverImage"
+        },
+        "description": "In a Japanese jail sits 17-year-old Jotaro Kujo: punk, fighter, delinquent...and possessed by a force beyond his control! Around the world, evil spirits are awakening: \"Stands,\" monstrous invisible creatures which give their bearers incredible powers. To save his mother's life, Jotaro must tame his dark forces and travel around the world to Cairo, Egypt, where a hundred-year-old vampire thirsts for the blood of his family. But the road is long, and an army of evil Stand Users waits to kill JoJo and his friends...\n<br><br>\n(Source: Viz Media)",
+        "episodes": 24,
+        "startDate": {
+            "year": 2014,
+            "month": 4,
+            "__typename": "FuzzyDate"
+        },
+        "nextAiringEpisode": null,
+        "characters": {
+            "edges": [
+                {
+                    "id": 95711,
+                    "node": {
+                        "name": {
+                            "full": "Joutarou Kuujou",
+                            "native": "空条承太郎",
+                            "__typename": "CharacterName"
+                        },
+                        "image": {
+                            "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b4003-gWDSEGbeOAll.png",
+                            "__typename": "CharacterImage"
+                        },
+                        "__typename": "Character"
+                    },
+                    "__typename": "CharacterEdge"
+                },
+                {
+                    "id": 95712,
+                    "node": {
+                        "name": {
+                            "full": "Mohammed Avdol",
+                            "native": "モハメド・アヴドゥル",
+                            "__typename": "CharacterName"
+                        },
+                        "image": {
+                            "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b8946-BumWgNGkPP9W.jpg",
+                            "__typename": "CharacterImage"
+                        },
+                        "__typename": "Character"
+                    },
+                    "__typename": "CharacterEdge"
+                },
+                {
+                    "id": 95713,
+                    "node": {
+                        "name": {
+                            "full": "Noriaki Kakyouin",
+                            "native": "花京院典明",
+                            "__typename": "CharacterName"
+                        },
+                        "image": {
+                            "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/8945-gyPfrVpCb5CF.jpg",
+                            "__typename": "CharacterImage"
+                        },
+                        "__typename": "Character"
+                    },
+                    "__typename": "CharacterEdge"
+                },
+                {
+                    "id": 95714,
+                    "node": {
+                        "name": {
+                            "full": "Jean-Pierre Polnareff",
+                            "native": "ジャン＝ピエール・ポルナレフ",
+                            "__typename": "CharacterName"
+                        },
+                        "image": {
+                            "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b4368-1KToX8uSi1U1.png",
+                            "__typename": "CharacterImage"
+                        },
+                        "__typename": "Character"
+                    },
+                    "__typename": "CharacterEdge"
+                },
+                {
+                    "id": 99975,
+                    "node": {
+                        "name": {
+                            "full": "Joseph Joestar",
+                            "native": "ジョセフ・ジョースター",
+                            "__typename": "CharacterName"
+                        },
+                        "image": {
+                            "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b6356-RImEfUfHpC58.png",
+                            "__typename": "CharacterImage"
+                        },
+                        "__typename": "Character"
+                    },
+                    "__typename": "CharacterEdge"
+                }
+            ],
+            "__typename": "CharacterConnection"
+        },
+        "__typename": "Media"
+    }
+}
+}
