@@ -43,6 +43,7 @@ export function Header() {
 				className='header--search'
 				role='img'
 				aria-label='search'
+				data-testid="search-button"
 				onClick={(e) => findAnime(e)}
 			>
 				🔎

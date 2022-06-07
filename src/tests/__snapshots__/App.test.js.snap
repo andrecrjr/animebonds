@@ -15,6 +15,7 @@ exports[`Main component test should open an anime page when i click 1`] = `
     <span
       aria-label="search"
       class="header--search"
+      data-testid="search-button"
       role="img"
     >
       🔎
@@ -728,6 +729,469 @@ exports[`Main component test should open an anime page when i click 1`] = `
 </main>
 `;
 
+exports[`Main component test should search an anime 1`] = `
+<main>
+  <header
+    class="header__browser"
+    style="background-image: url(undefined);"
+  >
+    <h1
+      class="header--logo"
+      style="color: white; text-shadow: 0px 0px 6px white, 0px 0px 2px black;"
+    >
+      AnimeBonds
+    </h1>
+    <span
+      aria-label="search"
+      class="header--search"
+      data-testid="search-button"
+      role="img"
+    >
+      🔎
+    </span>
+  </header>
+  <section
+    class="list__page"
+    style="padding-top: 0px;"
+  >
+    <div
+      class="anime__page"
+    >
+      <div
+        class="anime__page--container"
+      >
+        <span
+          class="anime__page--close"
+        >
+          X
+        </span>
+        <section
+          class="anime__page--search"
+        >
+          <input
+            class="search__input"
+            placeholder="Search your favorite animes"
+            type="text"
+            value="One Piece"
+          />
+          <section
+            class="list__row"
+          >
+            <div
+              class="list__section"
+            >
+              <div
+                class="list__title"
+              >
+                Searching for One Piece
+              </div>
+              <div
+                class="list__section--next"
+              />
+              <div
+                class="list__section--next after"
+              />
+              <div
+                class="list__section--shadow"
+              />
+              <div
+                class="list__wrapper"
+              >
+                <div
+                  class="list__wrapper--slide"
+                  data-genre="one-piece"
+                  data-load="done"
+                  style="transform: translateX(-0px);"
+                >
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="ONE PIECE"
+                      class="list__cell--item 21"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21-tXMN3Y20PIL9.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="ONE PIECE: The Movie"
+                      class="list__cell--item 459"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx459-2OTwLud8OnFA.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Episode of Merry - The Tale of One More Friend"
+                      class="list__cell--item 19123"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx19123-leET1CrSJknT.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Stampede"
+                      class="list__cell--item 105143"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx105143-x7iaiwKyGKpB.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 15323"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/15323.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Romance Dawn Story"
+                      class="list__cell--item 5252"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5252.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 116054"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx116054-FD9QZRypg2Ot.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Heart of Gold"
+                      class="list__cell--item 21831"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21831-VoDhEVaTaGEq.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Mega Mecha Soldier of Karakuri Castle"
+                      class="list__cell--item 465"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx465-qSRr0MKYhS0I.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Baron Omatsuri and the Secret Island"
+                      class="list__cell--item 464"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/464.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Clockwork Island Adventure"
+                      class="list__cell--item 460"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx460-sVkSq3ykAv1U.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Chopper’s Kingdom on the Island of Strange Animals"
+                      class="list__cell--item 461"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx461-DC9fMDl3AaK1.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece The Movie: The Dead End Adventure"
+                      class="list__cell--item 462"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx462-Ig8zfdsFWcql.png"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: The Curse of the Sacred Sword"
+                      class="list__cell--item 463"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx463-QDnETPoHp9oD.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: The Desert Princess and the Pirates, Adventures in Alabasta"
+                      class="list__cell--item 2107"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2107-H8bRuRRbhCIJ.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Episode Of Chopper +: The Miracle Winter Cherry Blossom"
+                      class="list__cell--item 3848"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b3848-mkoz4nioyztr.png"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Episode of Skypiea"
+                      class="list__cell--item 101918"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b101918-PYSSW4c9WS6a.png"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="ONE PIECE FILM RED"
+                      class="list__cell--item 141902"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx141902-jMVMWe7T2Ham.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece Film: Z"
+                      class="list__cell--item 12859"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx12859-uQFENDPzMWz6.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece Film: Gold"
+                      class="list__cell--item 21335"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21335-XsXdE0AeOkkZ.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece Film: Strong World"
+                      class="list__cell--item 4155"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx4155-qNQTBREF92fp.png"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 107110"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n107110-pF0sMxDe3aLi.png"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 113308"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113308-u6wWW3d01DSt.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 101099"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b101099-3AoCbJWTj2cV.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 16468"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b16468-pMKFwfY8lYZX.png"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 2386"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/2386-NQQkq1taHJ08.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 2680"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2680-WChEC5K8EebB.png"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Adventure of Nebulandia"
+                      class="list__cell--item 21485"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21485-KR1sv4rYSe6V.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 1238"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1238-rU6fE1pv2kmd.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Episode of East Blue"
+                      class="list__cell--item 99302"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx99302-b40WIhc5dylo.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Defeat the Pirate Ganzack!"
+                      class="list__cell--item 466"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx466-bVP54I7dCB2F.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece 3D2Y: Overcome Ace’s Death! Luffy’s Vow to his Friends"
+                      class="list__cell--item 20835"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20835-kYzoAyPelQXi.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece 3D: Mugiwara Chase"
+                      class="list__cell--item 9999"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/9999.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      alt="One Piece: Django's Dance Carnival"
+                      class="list__cell--item 2385"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n2385-us99rub90MzL.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 12001"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx12001-XX0NNNfaKZ3e.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 1094"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1094.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 2490"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/2490-AL4WmnCJ5zvE.jpg"
+                    />
+                  </section>
+                  <section
+                    class="list__cell"
+                  >
+                    <img
+                      class="list__cell--item 10033"
+                      src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx10033-V7xnlgAVtaVR.jpg"
+                    />
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+    <section
+      class="list__row"
+    >
+      <h1>
+        Some problem with 
+        Action
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Drama
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Adventure
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Mystery
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Romance
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Sci-fi
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Fantasy
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Ecchi
+         data from anilist!
+      </h1>
+      <h1>
+        Some problem with 
+        Mecha
+         data from anilist!
+      </h1>
+    </section>
+  </section>
+</main>
+`;
+
 exports[`Main component test should take main page 1`] = `
 <main>
   <header
@@ -743,6 +1207,7 @@ exports[`Main component test should take main page 1`] = `
     <span
       aria-label="search"
       class="header--search"
+      data-testid="search-button"
       role="img"
     >
       🔎
