@@ -7,7 +7,7 @@ import {Outlet} from "react-router-dom";
 
 function AnimePage(props) {
 	const {id} = useParams();
-
+	
 	const {loading, data, error} = useQuery(ANIME_PAGE, {
 		variables: {animeId: id || 0},
 	});
@@ -17,14 +17,14 @@ function AnimePage(props) {
 	}
 
 	if (error) {
-		return <div className='anime__page'>Whoops something went wrong</div>;
+		return <div className='anime__page'>Oops, something went wrong with the anime loading!</div>;
 	}
 	const {Media} = data;
 	const {edges: characters} = Media.characters;
 
 	return (
 		<Layout>
-			<section className='anime__header'>
+			<section className='anime__header' data-testid={`${id && Media.title.english} - Page`}>
 				{Object.keys(Media.coverImage).length > 0 && (
 					<img
 						src={Media.coverImage.large}

@@ -8,7 +8,7 @@ export function Header() {
 
 	const findAnime = (e) => {
 		e.preventDefault();
-		if (state.selected.cont > 0) {
+		if (state?.selected?.cont > 0) {
 			window.scroll(0, 100);
 		}
 		if (document.querySelector("header").classList.contains("larger--height")) {
@@ -21,19 +21,19 @@ export function Header() {
 
 	return (
 		<header
-			className={`header${state.selected.cont > 0 ? "" : `__browser`}`}
+			className={`header${state?.selected?.cont > 0 ? "" : `__browser`}`}
 			style={{
-				backgroundImage: `url('${state && state.selected.bannerImage}')`,
+				backgroundImage: `url('${state && state?.selected?.bannerImage}')`,
 			}}
 		>
 			<h1
 				className='header--logo'
 				style={{
 					color: `${
-						state.selected.cont > 0 ? state.selected.coverImage.color : "white"
+						state?.selected?.cont > 0 ? state.selected.coverImage.color : "white"
 					}`,
 					textShadow: `0px 0px 6px ${
-						state.selected.cont > 0 ? state.selected.coverImage.color : "white"
+						state?.selected?.cont > 0 ? state.selected.coverImage.color : "white"
 					}, 0px 0px 2px black`,
 				}}
 			>
@@ -43,13 +43,14 @@ export function Header() {
 				className='header--search'
 				role='img'
 				aria-label='search'
+				data-testid="search-button"
 				onClick={(e) => findAnime(e)}
 			>
 				🔎
 			</span>
-			{state.selected.cont > 0 && (
+			{state?.selected?.cont > 0 && (
 				<>
-					<HeaderAnime anime={state.selected} />
+					<HeaderAnime anime={state?.selected} />
 					<div className='shadows'></div>
 				</>
 			)}
@@ -82,7 +83,7 @@ const HeaderAnime = ({anime}) => {
 				<img
 					className='header__anime--image'
 					src={anime?.coverImage?.large}
-					alt={anime.title.english}
+					alt={`${anime?.title?.english} header`}
 				/>
 				<div className='header__anime--title-area'>
 					<h1 className='header__anime--title'>
@@ -92,6 +93,7 @@ const HeaderAnime = ({anime}) => {
 						className='header__anime--more'
 						style={{background: anime.coverImage.color}}
 						onClick={(e) => redirectPage(e, anime.id)}
+						alt={`${anime?.title?.english} - Read About`}
 					>
 						Read about!
 					</button>

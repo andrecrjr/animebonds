@@ -17,7 +17,7 @@ export default function Main() {
         <section
           className='list__page'
           style={{
-            paddingTop: state.selected.cont === 0 && "0",
+            paddingTop: state?.selected?.cont === 0 && "0",
           }}
         >
           <AnimePage />

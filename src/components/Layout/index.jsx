@@ -31,7 +31,7 @@ export default (props) => {
       )}`
     );
   };
-  console.log(loc)
+  
   return (
     <div className='anime__page'>
       <div className='anime__page--container'>
