@@ -24,7 +24,7 @@ function AnimePage(props) {
 
 	return (
 		<Layout>
-			<section className='anime__header' data-testid={`${id && Media.title.userPreferred} - Page`}>
+			<section className='anime__header' data-testid={`${id && Media.title.english} - Page`}>
 				{Object.keys(Media.coverImage).length > 0 && (
 					<img
 						src={Media.coverImage.large}

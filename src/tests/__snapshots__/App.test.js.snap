@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main component test should open an anime page then snap 1`] = `
+exports[`Main component test should open an anime page when i click 1`] = `
 <main>
   <header
     class="header larger--height"
@@ -64,7 +64,7 @@ exports[`Main component test should open an anime page then snap 1`] = `
         </span>
         <section
           class="anime__header"
-          data-testid="JoJo no Kimyou na Bouken: Stardust Crusaders - Page"
+          data-testid="JoJo's Bizarre Adventure: Stardust Crusaders - Page"
         >
           <img
             alt="JoJo no Kimyou na Bouken: Stardust Crusaders"
