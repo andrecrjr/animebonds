@@ -60,7 +60,7 @@ const SearchRow = ({ data }) => {
   if (data.media.length > 0)
     return (
       <section className="list__row">
-        <CarouselRow data={data} />
+        <CarouselRow data={data} search={true} />
       </section>
     );
 

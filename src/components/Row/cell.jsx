@@ -27,7 +27,7 @@ export function AnimeCell({ item, index }) {
       className="list__cell"
       onClick={(e) => {
         e.preventDefault();
-        if (typeof pageState !== "undefined" && pageState.search.search) {
+        if (typeof pageState !== "undefined" && pageState?.search?.search) {
           navigate(`/anime/${item.id}`, {
             animeBack: encodeURIComponent(pageState.search.textSearch),
           });
