@@ -61,7 +61,7 @@ function AllTheProviders({children}) {
     const [pageState, dispatchPageState] = useReducer(PageReducer, statePage)
     
     return(
-        <MockedProvider mocks={mocks} resultCaching={true}>
+        <MockedProvider mocks={mocks}>
                 <BrowserRouter history={history} >
                     <PageContext.Provider value={{pageState, dispatchPageState}}>
                         <AnimeContext.Provider value={{state}}>
