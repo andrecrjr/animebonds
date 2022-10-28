@@ -1,9 +1,17 @@
 module.exports = {
 	env: {
 		browser: true,
-		es2021: true
+		es2021: true,
+		'jest/globals': true,
+		jest: true,
+		node: true
 	},
-	extends: ['plugin:react/recommended', 'prettier'],
+	extends: [
+		'eslint:recommended',
+		'plugin:react/recommended',
+		'prettier',
+		'plugin:jest/recommended'
+	],
 	overrides: [
 		{
 			files: ['*.test.js'],
@@ -16,12 +24,13 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module'
 	},
-	plugins: ['react', 'prettier'],
+	plugins: ['react', 'prettier', 'jest'],
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
 		'import/prefer-default-export': 'off',
-		'react/prop-types': 'off'
+		'react/prop-types': 'off',
+		'jest/no-mocks-import': 'off'
 	}
 };

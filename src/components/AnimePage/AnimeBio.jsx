@@ -1,6 +1,6 @@
 import {AnimeProfileChar} from './AnimeProfileChar';
 import {useOutletContext} from 'react-router-dom';
-export const OverviewPage = (props) => {
+export const OverviewPage = () => {
 	const {Media, characters} = useOutletContext();
 	return (
 		<section className='anime__bio'>

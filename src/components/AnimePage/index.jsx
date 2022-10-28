@@ -5,7 +5,7 @@ import {NavLink, useParams} from 'react-router-dom';
 import Layout from '../Layout';
 import {Outlet} from 'react-router-dom';
 
-function AnimePage(props) {
+function AnimePage() {
 	const {id} = useParams();
 	
 	const {loading, data, error} = useQuery(ANIME_PAGE, {

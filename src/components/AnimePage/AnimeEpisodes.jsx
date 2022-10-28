@@ -3,7 +3,7 @@ import {useQuery} from '@apollo/client';
 import {ANIME_EPISODES_PAGE} from '../../helper/';
 export const AnimeEpisodes = () => {
 	const {id} = useOutletContext();
-	const {loading, data, error} = useQuery(ANIME_EPISODES_PAGE, {
+	const {data, error} = useQuery(ANIME_EPISODES_PAGE, {
 		variables: {animeId: id || 0},
 	});
 	if (data) {
