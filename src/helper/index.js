@@ -4,6 +4,6 @@ import {
   ANIME_SEARCH,
   ANIME_PAGE,
   ANIME_EPISODES_PAGE
-} from "./gqlqueries";
+} from './gqlqueries';
 
 export { SEARCH_ANIME_CHAR_QUERY, ANIME_CATEGORIES, ANIME_PAGE, ANIME_SEARCH, ANIME_EPISODES_PAGE };

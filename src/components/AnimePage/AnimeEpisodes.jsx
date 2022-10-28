@@ -1,6 +1,6 @@
-import {useOutletContext} from "react-router-dom";
-import {useQuery} from "@apollo/client";
-import {ANIME_EPISODES_PAGE} from "../../helper/";
+import {useOutletContext} from 'react-router-dom';
+import {useQuery} from '@apollo/client';
+import {ANIME_EPISODES_PAGE} from '../../helper/';
 export const AnimeEpisodes = () => {
 	const {id} = useOutletContext();
 	const {loading, data, error} = useQuery(ANIME_EPISODES_PAGE, {
@@ -29,7 +29,7 @@ export const AnimeEpisodeCell = ({data}) => {
 		<>
 			{data.map((item) => {
 				return (
-					<a href={`${item.url}`} target='_blank' class='episode'>
+					<a href={`${item.url}`} rel="noreferrer" key={item.url} target='_blank' className='episode'>
 						<section className='list__episode'>
 							<img
 								src={`${item.thumbnail}`}
@@ -37,7 +37,7 @@ export const AnimeEpisodeCell = ({data}) => {
 								width='150'
 								title={item.title}
 							/>
-							<div class='list__episode--title'>{item.title}</div>
+							<div className='list__episode--title'>{item.title}</div>
 						</section>
 					</a>
 				);

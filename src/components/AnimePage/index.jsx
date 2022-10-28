@@ -1,9 +1,9 @@
-import React from "react";
-import {useQuery} from "@apollo/client";
-import {ANIME_PAGE} from "../../helper";
-import {NavLink, useParams} from "react-router-dom";
-import Layout from "../Layout";
-import {Outlet} from "react-router-dom";
+import React from 'react';
+import {useQuery} from '@apollo/client';
+import {ANIME_PAGE} from '../../helper';
+import {NavLink, useParams} from 'react-router-dom';
+import Layout from '../Layout';
+import {Outlet} from 'react-router-dom';
 
 function AnimePage(props) {
 	const {id} = useParams();

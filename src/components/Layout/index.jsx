@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export default (props) => {
+const Layout = (props) => {
   const navigate = useNavigate();
-  const loc = useLocation()
+  const loc = useLocation();
 
-  const body = document.querySelector("body");
+  const body = document.querySelector('body');
   useEffect(() => {
     if (body.clientWidth < 661) {
-      body.classList.toggle("open--anime-page");
+      body.classList.toggle('open--anime-page');
     }
   }, [body]);
 
   const closePage = (e) => {
     e.preventDefault();
-    body.classList.remove("open--anime-page");
-    document.querySelector("header").classList.remove("larger--height");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate("/");
+    body.classList.remove('open--anime-page');
+    document.querySelector('header').classList.remove('larger--height');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate('/');
   };
 
   const goBack = (e) => {
@@ -50,3 +50,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default Layout;

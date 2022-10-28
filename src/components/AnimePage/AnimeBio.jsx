@@ -1,5 +1,5 @@
-import {AnimeProfileChar} from "./AnimeProfileChar";
-import {useOutletContext} from "react-router-dom";
+import {AnimeProfileChar} from './AnimeProfileChar';
+import {useOutletContext} from 'react-router-dom';
 export const OverviewPage = (props) => {
 	const {Media, characters} = useOutletContext();
 	return (

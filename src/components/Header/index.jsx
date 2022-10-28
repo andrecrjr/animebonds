@@ -1,8 +1,9 @@
-import React, {useContext} from "react";
-import {AnimeContext} from "../contexts";
-import {useNavigate} from "react-router-dom";
+import React, {useContext} from 'react';
+import {useNavigate} from 'react-router-dom';
 
-export function Header() {
+import {AnimeContext} from '../contexts';
+
+function Header() {
 	const {state} = useContext(AnimeContext);
 	const navigateTo = useNavigate();
 
@@ -11,17 +12,17 @@ export function Header() {
 		if (state?.selected?.cont > 0) {
 			window.scroll(0, 100);
 		}
-		if (document.querySelector("header").classList.contains("larger--height")) {
+		if (document.querySelector('header').classList.contains('larger--height')) {
 			document
-				.querySelector("header.header")
-				.classList.remove("larger--height");
+				.querySelector('header.header')
+				.classList.remove('larger--height');
 		}
-		navigateTo("/browser");
+		navigateTo('/browser');
 	};
 
 	return (
 		<header
-			className={`header${state?.selected?.cont > 0 ? "" : `__browser`}`}
+			className={`header${state?.selected?.cont > 0 ? '' : '__browser'}`}
 			style={{
 				backgroundImage: `url('${state && state?.selected?.bannerImage}')`,
 			}}
@@ -30,10 +31,10 @@ export function Header() {
 				className='header--logo'
 				style={{
 					color: `${
-						state?.selected?.cont > 0 ? state.selected.coverImage.color : "white"
+						state?.selected?.cont > 0 ? state.selected.coverImage.color : 'white'
 					}`,
 					textShadow: `0px 0px 6px ${
-						state?.selected?.cont > 0 ? state.selected.coverImage.color : "white"
+						state?.selected?.cont > 0 ? state.selected.coverImage.color : 'white'
 					}, 0px 0px 2px black`,
 				}}
 			>
@@ -58,17 +59,18 @@ export function Header() {
 	);
 }
 
+
 const HeaderAnime = ({anime}) => {
 	const navigate = useNavigate();
 	React.useEffect(() => {
-		document.querySelector("header").classList.remove("larger--height");
+		document.querySelector('header').classList.remove('larger--height');
 	}, [anime]);
 
 	const desktopOpen = () => {
 		if (window.innerWidth >= 661) {
 			document
-				.querySelector("header.header")
-				.classList.toggle("larger--height");
+				.querySelector('header.header')
+				.classList.toggle('larger--height');
 		}
 	};
 	const redirectPage = (e, animeId) => {
@@ -101,3 +103,6 @@ const HeaderAnime = ({anime}) => {
 			</div>
 		);
 };
+
+
+export default Header;

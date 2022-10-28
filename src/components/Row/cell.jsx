@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { AnimeContext, PageContext } from "../contexts/";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from 'react';
+import { AnimeContext, PageContext } from '../contexts/';
+import { useNavigate } from 'react-router-dom';
 
 
 export const Cells = ({ data }) => {
@@ -15,26 +15,26 @@ export const Cells = ({ data }) => {
       ))}
     </>
   );
-}
+};
 
 
 export function AnimeCell({ item, index }) {
   const { dispatchAnime } = useContext(AnimeContext);
-  const { pageState } = useContext(PageContext)
+  const { pageState } = useContext(PageContext);
   const navigate = useNavigate();
   return (
     <section
       className="list__cell"
       onClick={(e) => {
         e.preventDefault();
-        if (typeof pageState !== "undefined" && pageState?.search?.search) {
+        if (typeof pageState !== 'undefined' && pageState?.search?.search) {
           navigate(`/anime/${item.id}`, {
             animeBack: encodeURIComponent(pageState.search.textSearch),
           });
         } else {
-          dispatchAnime({ type: "SELECT_ANIME", payload: item });
-          navigate("/");
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          dispatchAnime({ type: 'SELECT_ANIME', payload: item });
+          navigate('/');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }}
     >

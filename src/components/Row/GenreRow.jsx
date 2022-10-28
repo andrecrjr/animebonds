@@ -1,7 +1,7 @@
-import React from "react";
-import { CarouselRow } from "./CarouselRow";
-import { useQuery } from "@apollo/client";
-import { ANIME_CATEGORIES } from "../../helper/";
+import React from 'react';
+import { CarouselRow } from './CarouselRow';
+import { useQuery } from '@apollo/client';
+import { ANIME_CATEGORIES } from '../../helper/';
 
 export function GenreRow({ genre }) {
   const { loading, data, error } = useQuery(ANIME_CATEGORIES, {

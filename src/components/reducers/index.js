@@ -4,7 +4,7 @@ export const initialState = {
 
 export const AnimeReducer = (state, action) => {
   switch (action.type) {
-    case "SELECT_ANIME":
+    case 'SELECT_ANIME':
       return {
         ...state,
         selected: {

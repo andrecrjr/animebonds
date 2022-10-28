@@ -1,5 +1,5 @@
-//get anime char
-import { gql } from "@apollo/client";
+// get anime char
+import { gql } from '@apollo/client';
 
 export const ANIME_CATEGORIES = gql`
   query($genre:[String], $notGenre:[String]) {
@@ -40,7 +40,7 @@ Media(id: $animeId) {
       }
   }
 }
-`
+`;
 
 export const ANIME_PAGE = gql`
   query getAnimeData($animeId: Int) {
