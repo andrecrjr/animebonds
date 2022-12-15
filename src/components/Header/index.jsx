@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 import { AnimeContext } from '../contexts';

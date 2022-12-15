@@ -16,7 +16,7 @@ describe('Main component test', () => {
 
 	it('should open an anime page when i click', async () => {
 		const { container } = renderWithWrappers(<Main />);
-		const anime = 'JoJo\'s Bizarre Adventure: Stardust Crusaders';
+		const anime = "JoJo's Bizarre Adventure: Stardust Crusaders";
 		const image = await screen.findByAltText(anime);
 		image.click();
 		const button = await screen.findByTestId(`${anime} - Read About`);

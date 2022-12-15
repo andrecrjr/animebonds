@@ -61,7 +61,6 @@ exports[`Main component test should open an anime page when i click 1`] = `
       <div
         class="anime__page--container"
         data-projection-id="3"
-        style="opacity: 0;"
       >
         <span
           class="anime__page--close"
@@ -767,7 +766,6 @@ exports[`Main component test should search an anime 1`] = `
       <div
         class="anime__page--container"
         data-projection-id="8"
-        style="opacity: 0.19810910652088856;"
       >
         <span
           class="anime__page--close"

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Layout = (props) => {
 	const navigate = useNavigate();
@@ -34,14 +34,7 @@ const Layout = (props) => {
 
 	return (
 		<motion.div className="anime__page">
-			<motion.div
-				key="modal"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				exit={{ opacity: 0 }}
-				layout
-				className="anime__page--container"
-			>
+			<motion.div key="modal" layout className="anime__page--container">
 				{loc.state !== null ? (
 					<span className="anime__page--close" onClick={goBack}>
 						⬅

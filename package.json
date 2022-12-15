@@ -7,9 +7,10 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test:watch": "jest --env=jsdom --watch --silent",
-		"test":"jest --env=jsdom --silent",
+		"test": "jest --env=jsdom --silent",
 		"coverage": "jest  --env=jsdom --coverage",
 		"lint": "eslint --fix --ext .js,.jsx .",
+		"prettier:lint":"",
 		"prepare": "husky install"
 	},
 	"dependencies": {
