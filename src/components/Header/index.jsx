@@ -99,7 +99,8 @@ const HeaderAnime = ({ anime }) => {
 						className="header__anime--more"
 						style={{ background: anime.coverImage.color }}
 						onClick={(e) => redirectPage(e, anime.id)}
-						alt={`${anime?.title?.english} - Read About`}
+						data-testid={`${anime?.title?.english} - Read About`}
+						role="button"
 					>
 						Read about!
 					</button>

@@ -16,13 +16,11 @@ describe('Main component test', () => {
 
 	it('should open an anime page when i click', async () => {
 		const { container } = renderWithWrappers(<Main />);
-		const anime = "JoJo's Bizarre Adventure: Stardust Crusaders";
-		await waitFor(() => new Promise((res) => setTimeout(res, 1)));
+		const anime = 'JoJo\'s Bizarre Adventure: Stardust Crusaders';
 		const image = await screen.findByAltText(anime);
 		image.click();
-		const button = container.querySelector('.header__anime--more');
+		const button = await screen.findByTestId(`${anime} - Read About`);
 		button.click();
-		await waitFor(() => new Promise((res) => setTimeout(res, 1)));
 		expect(await screen.findByTestId(`${anime} - Page`)).toBeInTheDocument();
 		expect(container.firstChild).toMatchSnapshot();
 	});
@@ -32,12 +30,10 @@ describe('Main component test', () => {
 		const animeInput = 'One Piece';
 		const buttonSearch = await screen.findByTestId('search-button');
 		buttonSearch.click();
-		await waitFor(() => new Promise((res) => setTimeout(res, 1)));
 		const inputSearch = await screen.findByPlaceholderText(
 			'Search your favorite animes'
 		);
 		fireEvent.change(inputSearch, { target: { value: animeInput } });
-		await waitFor(() => new Promise((res) => setTimeout(res, 1)));
 		expect(
 			await screen.findByText('Searching for One Piece')
 		).toBeInTheDocument();

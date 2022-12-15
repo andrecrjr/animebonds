@@ -6,9 +6,11 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"test": "jest --env=jsdom",
+		"test:watch": "jest --env=jsdom --watch --silent",
+		"test":"jest --env=jsdom --silent",
 		"coverage": "jest  --env=jsdom --coverage",
-		"lint": "eslint --fix --ext .js,.jsx ."
+		"lint": "eslint --fix --ext .js,.jsx .",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@apollo/client": "^3.5.10",
@@ -44,7 +46,8 @@
 		"jest-environment-jsdom": "^28.1.0",
 		"prettier": "^2.7.1",
 		"react-test-renderer": "17.0.2",
-		"vite": "^2.8.0"
+		"vite": "^2.8.0",
+		"husky": "^8.0.0"
 	},
 	"eslintIgnore": [
 		"*.spec.ts",
