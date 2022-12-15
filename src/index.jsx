@@ -6,16 +6,16 @@ import { BrowserRouter } from 'react-router-dom';
 import './style/index.scss';
 
 const client = new ApolloClient({
-  uri: 'https://graphql.anilist.co',
-  cache: new InMemoryCache(),
+	uri: 'https://graphql.anilist.co',
+	cache: new InMemoryCache()
 });
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-  <BrowserRouter>
-    <ApolloProvider client={client}>
-      <Main />
-    </ApolloProvider>
-  </BrowserRouter>,
-  rootElement
+	<BrowserRouter>
+		<ApolloProvider client={client}>
+			<Main />
+		</ApolloProvider>
+	</BrowserRouter>,
+	rootElement
 );

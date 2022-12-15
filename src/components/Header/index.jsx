@@ -1,10 +1,11 @@
-import React, {useContext} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useContext } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
-import {AnimeContext} from '../contexts';
+import { AnimeContext } from '../contexts';
 
 function Header() {
-	const {state} = useContext(AnimeContext);
+	const { state } = useContext(AnimeContext);
 	const navigateTo = useNavigate();
 
 	const findAnime = (e) => {
@@ -24,26 +25,30 @@ function Header() {
 		<header
 			className={`header${state?.selected?.cont > 0 ? '' : '__browser'}`}
 			style={{
-				backgroundImage: `url('${state && state?.selected?.bannerImage}')`,
+				backgroundImage: `url('${state && state?.selected?.bannerImage}')`
 			}}
 		>
 			<h1
-				className='header--logo'
+				className="header--logo"
 				style={{
 					color: `${
-						state?.selected?.cont > 0 ? state.selected.coverImage.color : 'white'
+						state?.selected?.cont > 0
+							? state.selected.coverImage.color
+							: 'white'
 					}`,
 					textShadow: `0px 0px 6px ${
-						state?.selected?.cont > 0 ? state.selected.coverImage.color : 'white'
-					}, 0px 0px 2px black`,
+						state?.selected?.cont > 0
+							? state.selected.coverImage.color
+							: 'white'
+					}, 0px 0px 2px black`
 				}}
 			>
 				AnimeBonds
 			</h1>
 			<span
-				className='header--search'
-				role='img'
-				aria-label='search'
+				className="header--search"
+				role="img"
+				aria-label="search"
 				data-testid="search-button"
 				onClick={(e) => findAnime(e)}
 			>
@@ -52,15 +57,14 @@ function Header() {
 			{state?.selected?.cont > 0 && (
 				<>
 					<HeaderAnime anime={state?.selected} />
-					<div className='shadows'></div>
+					<div className="shadows"></div>
 				</>
 			)}
 		</header>
 	);
 }
 
-
-const HeaderAnime = ({anime}) => {
+const HeaderAnime = ({ anime }) => {
 	const navigate = useNavigate();
 	React.useEffect(() => {
 		document.querySelector('header').classList.remove('larger--height');
@@ -81,19 +85,19 @@ const HeaderAnime = ({anime}) => {
 	};
 	if (anime)
 		return (
-			<div className='header__anime'>
+			<div className="header__anime">
 				<img
-					className='header__anime--image'
+					className="header__anime--image"
 					src={anime?.coverImage?.large}
 					alt={`${anime?.title?.english} header`}
 				/>
-				<div className='header__anime--title-area'>
-					<h1 className='header__anime--title'>
+				<div className="header__anime--title-area">
+					<h1 className="header__anime--title">
 						{anime?.title?.userPreferred}
 					</h1>
 					<button
-						className='header__anime--more'
-						style={{background: anime.coverImage.color}}
+						className="header__anime--more"
+						style={{ background: anime.coverImage.color }}
 						onClick={(e) => redirectPage(e, anime.id)}
 						alt={`${anime?.title?.english} - Read About`}
 					>
@@ -103,6 +107,5 @@ const HeaderAnime = ({anime}) => {
 			</div>
 		);
 };
-
 
 export default Header;

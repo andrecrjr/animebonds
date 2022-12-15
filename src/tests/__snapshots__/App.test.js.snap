@@ -733,7 +733,8 @@ exports[`Main component test should search an anime 1`] = `
 <main>
   <header
     class="header__browser"
-    style="background-image: url(undefined);"
+    data-projection-id="3"
+    style="background-image: url(undefined); opacity: 0.024323650880888906;"
   >
     <h1
       class="header--logo"
@@ -752,10 +753,12 @@ exports[`Main component test should search an anime 1`] = `
   </header>
   <section
     class="list__page"
+    data-projection-id="4"
     style="padding-top: 0px;"
   >
     <div
       class="anime__page"
+      data-projection-id="5"
     >
       <div
         class="anime__page--container"
@@ -1668,7 +1671,7 @@ exports[`Main component test should take main page 1`] = `
 <main>
   <header
     class="header__browser"
-    style="background-image: url(undefined);"
+    style="background-image: url(undefined); opacity: 0.0005555555555555556;"
   >
     <h1
       class="header--logo"

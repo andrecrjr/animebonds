@@ -22,14 +22,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
       - run: npm install
       - run: npm run test && npm run lint && npm run build
       - run: cp ./dist/index.html ./dist/200.html
       - name: Deploy to animebonds surge
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: "animebonds.surge.sh"
-          project: "./dist/"
+          domain: 'animebonds.surge.sh'
+          project: './dist/'
           login: ${{ secrets.surge_login }}
           token: ${{ secrets.surge_token }}
