@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: npm install
+      - run: npm install --force
       - run: npm run test && npm run lint && npm run build
       - run: cp ./dist/index.html ./dist/200.html
       - name: Deploy to animebonds surge
